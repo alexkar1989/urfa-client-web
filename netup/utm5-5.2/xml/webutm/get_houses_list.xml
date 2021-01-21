@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<urfa>
+	<call function="rpcf_get_houses_list"/>
+</urfa>

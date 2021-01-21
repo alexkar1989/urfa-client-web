@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+		<!-- -a add_telephony -account_id 117369 -service_id 426 -discount_period_id 7458 -tel_login karsak_245794 -tel_number 245794 -tel_password karsak_794 --> 
+<urfa>
+	<parameter name="account_id" value="0"/>
+	<parameter name="service_id" value="0"/>
+	<parameter name="service_type" value="6"/>
+	<parameter name="discount_period_id" value="0"/>
+	<parameter name="tel_login" value="0"/>
+	<parameter name="tel_number" value=""/>
+	<parameter name="tel_password" value=""/>
+	<!-- Проверка условий-->
+	<if variable="account_id" value="0" condition="eq">
+		<message text="ОШИБКА: Не передат л.с."/>
+		<break/>
+	</if>
+	<if variable="service_id" value="0" condition="eq">
+		<message text="ОШИБКА: Ид услуги не передат"/>
+		<break/>
+	</if>
+	<if variable="discount_period_id" value="0" condition="eq">
+		<message text="ОШИБКА: Расчетный период не передат"/>
+		<break/>
+	</if>
+	<if variable="tel_login" value="0" condition="eq">
+		<message text="ОШИБКА: Не передан Логин"/>
+		<break/>
+	</if>
+	<if variable="tel_number" value="0" condition="eq">
+		<message text="ОШИБКА: Не передан Номеор телефона"/>
+		<break/>
+	</if>
+	<!--        <parameter name="unabon" value="0"/>
+	<parameter name="unprepay" value="0"/>-->
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_add_service_to_user" output="0"/>
+
+</urfa>
+

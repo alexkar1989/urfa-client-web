@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- -a rpcf_delete_slink -slink_id  -->
+
+<urfa>
+	<parameter name="slink_id"/>
+	<call function="rpcf_delete_slink" output="0"/>
+</urfa>
+

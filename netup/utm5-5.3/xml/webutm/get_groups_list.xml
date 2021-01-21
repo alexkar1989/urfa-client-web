@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<urfa>
+	<parameter name="account_id"/>
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_get_groups_list"/>
+</urfa>

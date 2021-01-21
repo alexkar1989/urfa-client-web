@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--   -a get_sys_user -who_recev '-5' -->
+<urfa>
+	<parameter name="who_recev"/>
+        <call function="rpcf_get_sys_users_list" output="0"/>
+                <for name="i" from="0" count="info_size">
+                        <set dst="user_id_tmp" src="user_id" src_index="i"/>
+                        <set dst="login_tmp" src="login" src_index="i"/>
+			<if variable="user_id_tmp" value="who_recev" condition="eq">
+				<out var="login_tmp"/>
+			</if>
+                </for>
+
+</urfa>

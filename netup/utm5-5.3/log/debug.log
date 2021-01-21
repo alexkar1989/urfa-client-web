@@ -1,0 +1,1653 @@
+Jan 06 16:45:51  7aed1700  System version:  5.3-006-release-debian_stretch_x64
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 125499/653633 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 148862/653707
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 653707 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 653707 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 653707
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 148862/653707 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 152287/653712
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 653712 events 0 policy 32 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 653712 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 653712
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 152287/653712 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 152292/653731
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 653731 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.448248
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 653731 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 653731
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 152292/653731 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 152295/653742
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 653742 events 0 policy 32 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 653742 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 653742
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 152295/653742 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 70884/653768
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 653768 events 0 policy 56 cost_coef 1 charged 19.9219
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.219781
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 653768 amount -1.2405
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 653768 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 70884/653768 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 152308/653786
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 653786 events 0 policy 0 cost_coef 1 charged 84.375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 653786 amount 2.8125
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aac7800> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='87.1875',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='653786'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '653786' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '2.8125', discounted_without_tax = discounted_without_tax + '2.8125' WHERE is_closed = '0' AND slink_id = '653786'
+Jan 06 16:45:51  Info  : 7aed1700 FileAppender: Using '/netup/utm5/log/debug.log' file
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 2.8125 for link 653786 account 152308
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE accounts SET balance='253.1925' WHERE id='152308'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('152308','256.005','253.1925','2.8125','2.8125','422','2','653786','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '152308'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 152308
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aac7800> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 152308/653786 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 167264/1174327
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1174327 events 0 policy 56 cost_coef 1 charged 33.5938
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0727412
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1174327 amount -2.31504
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1174327 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 167264/1174327 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 49105/1177576
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1177576 events 0 policy 56 cost_coef 1 charged 164.062
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1177576 amount 5.46875
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaad2d0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='169.53125',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1177576'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1177576' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '5.46875', discounted_without_tax = discounted_without_tax + '5.46875' WHERE is_closed = '0' AND slink_id = '1177576'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 5.46875 for link 1177576 account 49105
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE accounts SET balance='180.7743615591398' WHERE id='49105'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('49105','186.2431115591398','180.7743615591398','5.46875','5.46875','803','2','1177576','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '49105'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 49105
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaad2d0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 49105/1177576 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 116692/1178090
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178090 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178090 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178090
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 116692/1178090 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199551/1178111
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178111 events 0 policy 56 cost_coef 1 charged 201.562
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178111 amount 6.71875
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaaca90> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='208.28125',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178111'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178111' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '6.71875', discounted_without_tax = discounted_without_tax + '6.71875' WHERE is_closed = '0' AND slink_id = '1178111'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 6.71875 for link 1178111 account 199551
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: UPDATE accounts SET balance='231.7367993329356' WHERE id='199551'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('199551','238.4555493329356','231.7367993329356','6.71875','6.71875','813','2','1178111','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '199551'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 199551
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaaca90> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199551/1178111 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199552/1178113
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178113 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.390631
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178113 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178113
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199552/1178113 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 71478/1178116
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178116 events 0 policy 0 cost_coef 1 charged 37.5
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178116 amount 1.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aab6160> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='38.75',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178116'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178116' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.25', discounted_without_tax = discounted_without_tax + '1.25' WHERE is_closed = '0' AND slink_id = '1178116'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.25 for link 1178116 account 71478
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: UPDATE accounts SET balance='996.562500000001' WHERE id='71478'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('71478','997.812500000001','996.562500000001','1.25','1.25','784','2','1178116','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '71478'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 71478
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aab6160> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 71478/1178116 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199554/1178122
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178122 events 0 policy 0 cost_coef 1 charged 84.375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178122 amount 2.8125
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa8f4d0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='87.1875',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178122'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178122' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '2.8125', discounted_without_tax = discounted_without_tax + '2.8125' WHERE is_closed = '0' AND slink_id = '1178122'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 2.8125 for link 1178122 account 199554
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: UPDATE accounts SET balance='-56.5675' WHERE id='199554'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('199554','-53.755','-56.5675','2.8125','2.8125','422','2','1178122','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '199554'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 199554
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa8f4d0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199554/1178122 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199558/1178136
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178136 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178136 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178136
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199558/1178136 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199566/1178156
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178156 events 0 policy 56 cost_coef 1 charged 23.4375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178156 amount 0.78125
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa90350> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='24.21875',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178156'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178156' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '0.78125', discounted_without_tax = discounted_without_tax + '0.78125' WHERE is_closed = '0' AND slink_id = '1178156'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 0.78125 for link 1178156 account 199566
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: UPDATE accounts SET balance='46.41967293906831' WHERE id='199566'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('199566','47.20092293906831','46.41967293906831','0.78125','0.78125','727','2','1178156','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '199566'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 199566
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa90350> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199566/1178156 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 180890/1178163
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178163 events 0 policy 0 cost_coef 1 charged 37.5
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178163 amount 1.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aabecb0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='38.75',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178163'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178163' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.25', discounted_without_tax = discounted_without_tax + '1.25' WHERE is_closed = '0' AND slink_id = '1178163'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.25 for link 1178163 account 180890
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: UPDATE accounts SET balance='86.35439814814821' WHERE id='180890'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('180890','87.60439814814821','86.35439814814821','1.25','1.25','784','2','1178163','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '180890'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 180890
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aabecb0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 180890/1178163 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199574/1178179
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178179 events 0 policy 0 cost_coef 1 charged 37.5
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178179 amount 1.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aad0350> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='38.75',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178179'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178179' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.25', discounted_without_tax = discounted_without_tax + '1.25' WHERE is_closed = '0' AND slink_id = '1178179'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.25 for link 1178179 account 199574
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: UPDATE accounts SET balance='901.25' WHERE id='199574'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('199574','902.5','901.25','1.25','1.25','784','2','1178179','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '199574'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 199574
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aad0350> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199574/1178179 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199575/1178180
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178180 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178180 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178180
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199575/1178180 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 14597/1178204
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178204 events 0 policy 56 cost_coef 1 charged 37.5
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178204 amount 1.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aac7800> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='38.75',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178204'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178204' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.25', discounted_without_tax = discounted_without_tax + '1.25' WHERE is_closed = '0' AND slink_id = '1178204'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.25 for link 1178204 account 14597
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE accounts SET balance='227.9429765978531' WHERE id='14597'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('14597','229.1929765978531','227.9429765978531','1.25','1.25','784','2','1178204','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '14597'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 14597
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aac7800> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 14597/1178204 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199583/1178214
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178214 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178214 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178214
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199583/1178214 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199583/1178215
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178215 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178215 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178215
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199583/1178215 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199584/1178216
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178216 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178216 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178216
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199584/1178216 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199586/1178226
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178226 events 0 policy 56 cost_coef 1 charged 136.719
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.375018
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178226 amount -5.46261
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1178226 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199586/1178226 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199591/1178240
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178240 events 0 policy 56 cost_coef 1 charged 43.75
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.109393
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178240 amount -5.46261
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1178240 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199591/1178240 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199595/1178263
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178263 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.265642
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178263 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178263
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199595/1178263 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199595/1178264
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178264 events 0 policy 56 cost_coef 1 charged 98.4375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.265642
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178264 amount -5.46287
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1178264 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199595/1178264 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 199598/1178282
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178282 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178282 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1178282
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 199598/1178282 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 194262/1178285
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1178285 events 0 policy 56 cost_coef 1 charged 70.3125
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1178285 amount 2.34375
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaad2d0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='72.65625',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1178285'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1178285' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '2.34375', discounted_without_tax = discounted_without_tax + '2.34375' WHERE is_closed = '0' AND slink_id = '1178285'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 2.34375 for link 1178285 account 194262
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE accounts SET balance='85.56403668685371' WHERE id='194262'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('194262','87.90778668685371','85.56403668685371','2.34375','2.34375','781','2','1178285','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '194262'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 194262
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaad2d0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 194262/1178285 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 31218/1179493
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1179493 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.140662
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1179493 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1179493
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 31218/1179493 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 31218/1179494
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1179494 events 0 policy 56 cost_coef 1 charged 67.1875
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.140662
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1179494 amount -6.7027
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1179494 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 31218/1179494 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 97582/1182676
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1182676 events 0 policy 0 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1182676 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1182676
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 97582/1182676 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 51532/1183027
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1183027 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.120059
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1183027 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1183027
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 51532/1183027 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 154495/663195
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 663195 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 663195 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 663195
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 154495/663195 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 180956/1184540
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184540 events 0 policy 56 cost_coef 1 charged 11.3293
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0689766
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184540 amount -0.982807
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1184540 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 180956/1184540 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201029/1184577
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184577 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.20313
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184577 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1184577
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201029/1184577 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201029/1184578
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184578 events 0 policy 56 cost_coef 1 charged 71.0938
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.20313
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184578 amount 0.00169878
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge amount 0.00169878 < threshold for link 1184578
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201029/1184578 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201031/1184592
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184592 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184592 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1184592
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201031/1184592 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201031/1184593
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184593 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184593 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1184593
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201031/1184593 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201033/1184599
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184599 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184599 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1184599
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201033/1184599 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201038/1184616
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184616 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184616 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1184616
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201038/1184616 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 201014/1184636
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184636 events 0 policy 56 cost_coef 1 charged 10.7359
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.071573
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184636 amount 3.55271e-15
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge amount 3.55271e-15 < threshold for link 1184636
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 201014/1184636 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 187598/1184643
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1184643 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0937545
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1184643 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1184643
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 187598/1184643 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 165691/1185079
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1185079 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1185079 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1185079
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 165691/1185079 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 106045/1186172
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1186172 events 0 policy 56 cost_coef 1 charged 140.625
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1186172 amount 4.6875
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaaca90> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='145.3125',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1186172'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1186172' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '4.6875', discounted_without_tax = discounted_without_tax + '4.6875' WHERE is_closed = '0' AND slink_id = '1186172'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 4.6875 for link 1186172 account 106045
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: UPDATE accounts SET balance='34.2751482974909' WHERE id='106045'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('106045','38.9626482974909','34.2751482974909','4.6875','4.6875','66','2','1186172','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '106045'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 106045
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aaacdd0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaaca90> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 106045/1186172 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 38390/1186568
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1186568 events 0 policy 0 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1186568 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1186568
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 38390/1186568 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 121422/1190048
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190048 events 0 policy 56 cost_coef 1 charged 210.938
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190048 amount 7.03125
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aab6160> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='217.96875',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190048'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190048' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '7.03125', discounted_without_tax = discounted_without_tax + '7.03125' WHERE is_closed = '0' AND slink_id = '1190048'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 7.03125 for link 1190048 account 121422
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: UPDATE accounts SET balance='100.0967519699041' WHERE id='121422'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('121422','107.1280019699041','100.0967519699041','7.03125','7.03125','805','2','1190048','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '121422'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 121422
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aac7300> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aab6160> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 121422/1190048 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 157354/1190053
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190053 events 0 policy 0 cost_coef 1 charged 46.875
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190053 amount 1.5625
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa8f4d0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='48.4375',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190053'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190053' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.5625', discounted_without_tax = discounted_without_tax + '1.5625' WHERE is_closed = '0' AND slink_id = '1190053'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.5625 for link 1190053 account 157354
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: UPDATE accounts SET balance='51.5625' WHERE id='157354'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('157354','53.125','51.5625','1.5625','1.5625','787','2','1190053','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '157354'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 157354
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aa8fc00> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa8f4d0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 157354/1190053 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202112/1190054
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190054 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0937657
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190054 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190054
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202112/1190054 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202112/1190055
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190055 events 0 policy 56 cost_coef 1 charged 38.2812
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0937657
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190055 amount -5.46326
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1190055 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202112/1190055 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202113/1190056
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190056 events 0 policy 0 cost_coef 1 charged 46.875
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190056 amount 1.5625
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa90350> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='48.4375',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190056'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190056' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.5625', discounted_without_tax = discounted_without_tax + '1.5625' WHERE is_closed = '0' AND slink_id = '1190056'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.5625 for link 1190056 account 202113
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: UPDATE accounts SET balance='51.5625' WHERE id='202113'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('202113','53.125','51.5625','1.5625','1.5625','787','2','1190056','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '202113'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 202113
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aab5c60> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aa90350> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202113/1190056 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202116/1190077
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190077 events 0 policy 56 cost_coef 1 charged 100.781
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.218766
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190077 amount -6.71185
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1190077 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202116/1190077 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202120/1190093
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190093 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484194
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190093 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190093
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202120/1190093 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202121/1190098
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190098 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190098 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190098
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202121/1190098 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202124/1190108
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190108 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190108 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190108
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202124/1190108 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202124/1190110
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190110 events 0 policy 56 cost_coef 1 charged 56.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190110 amount 1.875
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aabecb0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='58.125',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190110'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190110' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.875', discounted_without_tax = discounted_without_tax + '1.875' WHERE is_closed = '0' AND slink_id = '1190110'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.875 for link 1190110 account 202124
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: UPDATE accounts SET balance='189.9223640979697' WHERE id='202124'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('202124','191.7973640979697','189.9223640979697','1.875','1.875','782','2','1190110','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '202124'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 202124
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aacfe50> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aabecb0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202124/1190110 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 173167/1190119
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190119 events 0 policy 56 cost_coef 1 charged 56.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190119 amount 1.875
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aad0350> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='58.125',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190119'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190119' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.875', discounted_without_tax = discounted_without_tax + '1.875' WHERE is_closed = '0' AND slink_id = '1190119'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.875 for link 1190119 account 173167
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: UPDATE accounts SET balance='63.6364024198696' WHERE id='173167'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('173167','65.5114024198696','63.6364024198696','1.875','1.875','782','2','1190119','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '173167'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 173167
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aae14f0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aad0350> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 173167/1190119 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 71387/1190139
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190139 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.343762
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190139 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190139
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 71387/1190139 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202130/1190141
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190141 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190141 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190141
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202130/1190141 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202133/1190153
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190153 events 0 policy 56 cost_coef 1 charged 60.4688
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.125018
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190153 amount -6.7112
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: repay for the link 1190153 is now forbidden
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202133/1190153 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202137/1190166
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190166 events 0 policy 56 cost_coef 1 charged 21.4321
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0714404
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190166 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190166
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202137/1190166 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202137/1190168
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190168 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.0714404
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190168 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190168
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202137/1190168 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202138/1190177
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190177 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.171887
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190177 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190177
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202138/1190177 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 92025/1190181
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190181 events 0 policy 56 cost_coef 1 charged 37.5
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190181 amount 1.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aac7800> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='38.75',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190181'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190181' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.25', discounted_without_tax = discounted_without_tax + '1.25' WHERE is_closed = '0' AND slink_id = '1190181'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.25 for link 1190181 account 92025
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: UPDATE accounts SET balance='324.9878159224397' WHERE id='92025'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('92025','326.2378159224397','324.9878159224397','1.25','1.25','784','2','1190181','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '92025'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 92025
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aad89a0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aac7800> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 92025/1190181 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202141/1190190
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190190 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.30906
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190190 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190190
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202141/1190190 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202143/1190194
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190194 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190194 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190194
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202143/1190194 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202143/1190197
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190197 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190197 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190197
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202143/1190197 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202145/1190204
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190204 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190204 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190204
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202145/1190204 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 173187/1190231
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190231 events 0 policy 0 cost_coef 1 charged 37.5
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190231 amount 1.25
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaad2d0> is popped
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: BEGIN
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE periodic_service_links SET discounted_in_curr_period='38.75',repaid_in_curr_period='0',last_charge_date='1578303951' WHERE id='1190231'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: SELECT id FROM dtagg_periodic WHERE is_closed = '0' AND slink_id = '1190231' FOR UPDATE
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: 1 rows in 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE dtagg_periodic SET discounted = discounted + '1.25', discounted_without_tax = discounted_without_tax + '1.25' WHERE is_closed = '0' AND slink_id = '1190231'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge 1.25 for link 1190231 account 173187
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: UPDATE accounts SET balance='0.625' WHERE id='173187'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: INSERT INTO discount_transactions_all(account_id,incoming_rest,outgoing_rest,discount,discount_with_tax,service_id,service_type,slink_id,discount_date,charge_type,discount_period_id) VALUES ('173187','1.875','0.625','1.25','1.25','784','2','1190231','1578303951','2','7797')
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.000 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: SELECT id FROM dtagg_cust WHERE account_id = '173187'
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:45:51  Info  : 79d45700 UTM5 DBA: user 173159 reached balance 0.625
+Jan 06 16:45:51 ?Debug : 79d45700 TransactionQueueManager: executing transaction 0x7f21217233e0 events Events [ (balance_notification) ] in the handler 0x559e6ad78120
+Jan 06 16:45:51 ?Debug : 79d45700 TransactionQueueImpl: push: got transaction 0x7f21217233e0 size 1, Events [ (balance_notification) ]
+Jan 06 16:45:51 ?Debug : 79d45700 DBABlock: __check_system_block_status: account_id 173187
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query: COMMIT
+Jan 06 16:45:51 ?Debug : 79b43700 TransactionQueueImpl: run: processing transaction 0x7f21217233e0 events Events [ (balance_notification) ]
+Jan 06 16:45:51 ?Debug : 79b43700 DBConnectionPoolImpl: [1]: connection <0x559e6aaaca90> is popped
+Jan 06 16:45:51 ?Debug : 79b43700 TransactionQueueImpl: got event (balance_notification) {
+}
+
+Jan 06 16:45:51 ?Debug : 79b43700 PluginManagerImpl: Got RfwPlugin plugin for event (balance_notification)
+Jan 06 16:45:51 ?Debug : 79b43700 PluginManagerImpl: Got FWRulesPlugin plugin for event (get_fwrules)
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnection_mysql: <0x559e6aabe7b0> SQL query takes 0.001 sec
+Jan 06 16:45:51 ?Debug : 79d45700 DBConnectionPoolImpl: [1]: connection <0x559e6aaad2d0> is pushed back
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 173187/1190231 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 202149/1190234
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190234 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190234 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190234
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 202149/1190234 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 198161/1190240
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1190240 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.46775
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1190240 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1190240
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 198161/1190240 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 15877/1191949
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1191949 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.171885
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1191949 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1191949
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 15877/1191949 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 146064/1192577
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1192577 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.250003
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1192577 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1192577
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 146064/1192577 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 146028/1193065
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 1193065 events 0 policy 56 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 1193065 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 1193065
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 146028/1193065 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: executing event type 'flowing_charge' for object ID 1099/673514
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: __make_periodic_charge: slink_id 673514 events 0 policy 0 cost_coef 1 charged 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge coef: 0.484375
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: charge for link 673514 amount 0
+Jan 06 16:45:51 ?Debug : 79d45700 DBACharge: no charge for link 673514
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: event 'flowing_charge' for object ID 1099/673514 at 1578345750 has been scheduled
+Jan 06 16:45:51 ?Debug : 79d45700 EventScheduler: waiting 1 sec for next event (type 'block_start' for object_id 127892/0 at 1578303901)
+Jan 06 16:45:51 ?Debug : 79b43700 FWRulesPlugin: get_fwrules: got <0> rules
+Jan 06 16:45:51 ?Debug : 79b43700 RfwPlugin: rules list is empty, nothing to exec
+Jan 06 16:45:51 ?Debug : 79b43700 TransactionQueueImpl: buffer commit: queue size 0 socket_id 0 queue_id 1
+Jan 06 16:45:51 ?Debug : 79b43700 DBConnectionPoolImpl: [1]: connection <0x559e6aaaca90> is pushed back
+Jan 06 16:45:51 ?Debug : 79b43700 TransactionQueueImpl: run: processing transaction 0x7f21217233e0 done
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 127892/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 10171396, new block id 10171396 for account 127892
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 10171396 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 161191/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7484466, new block id 7484466 for account 161191
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7484466 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146069/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7298151, new block id 7298151 for account 146069
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7298151 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 172829/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7594420, new block id 7594420 for account 172829
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7594420 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 35401/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8544797, new block id 8544797 for account 35401
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8544797 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 143709/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8407068, new block id 8407068 for account 143709
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8407068 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 130046/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8252867, new block id 8252867 for account 130046
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8252867 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 118453/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7966637, new block id 7966637 for account 118453
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7966637 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 182793/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8110317, new block id 8110317 for account 182793
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8110317 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 74066/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7568086, new block id 7568086 for account 74066
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7568086 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 82433/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8041155, new block id 8041155 for account 82433
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8041155 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 77180/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7275464, new block id 7275464 for account 77180
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7275464 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 59752/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7243439, new block id 7243439 for account 59752
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7243439 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 29424/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7369600, new block id 7369600 for account 29424
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7369600 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 178712/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7614182, new block id 7614182 for account 178712
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7614182 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 174378/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7564434, new block id 7564434 for account 174378
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7564434 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 169386/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6880605, new block id 6880605 for account 169386
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6880605 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 159161/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7190611, new block id 7190611 for account 159161
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7190611 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 157347/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7115945, new block id 7115945 for account 157347
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7115945 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 154432/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6898671, new block id 6898671 for account 154432
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6898671 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 154392/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7560733, new block id 7560733 for account 154392
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7560733 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 85427/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7507584, new block id 7507584 for account 85427
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7507584 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 136703/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7020235, new block id 7020235 for account 136703
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7020235 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150287/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7614179, new block id 7614179 for account 150287
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7614179 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150275/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7197331, new block id 7197331 for account 150275
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7197331 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150223/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7230059, new block id 7230059 for account 150223
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7230059 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 103835/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7518505, new block id 7518505 for account 103835
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7518505 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150218/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6891709, new block id 6891709 for account 150218
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6891709 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 147987/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7118699, new block id 7118699 for account 147987
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7118699 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 147940/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6890468, new block id 6890468 for account 147940
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6890468 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146069/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7298151, new block id 7298151 for account 146069
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7298151 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146026/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6909692, new block id 6909692 for account 146026
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6909692 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 143732/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7055849, new block id 7055849 for account 143732
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7055849 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 143731/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7926459, new block id 7926459 for account 143731
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7926459 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 143702/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6737023, new block id 6737023 for account 143702
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6737023 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 178767/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7479214, new block id 7479214 for account 178767
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7479214 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 140418/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6480263, new block id 6480263 for account 140418
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6480263 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 138697/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7360974, new block id 7360974 for account 138697
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7360974 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 134363/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6452980, new block id 6452980 for account 134363
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6452980 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 134360/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7176987, new block id 7176987 for account 134360
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7176987 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 134346/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7219021, new block id 7219021 for account 134346
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7219021 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 132116/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7218957, new block id 7218957 for account 132116
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7218957 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 132096/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7636366, new block id 7636366 for account 132096
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7636366 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 132092/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6217992, new block id 6217992 for account 132092
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6217992 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 132068/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6453016, new block id 6453016 for account 132068
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6453016 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 127131/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7108451, new block id 7108451 for account 127131
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7108451 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 126176/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6654684, new block id 6654684 for account 126176
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6654684 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 121418/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7664148, new block id 7664148 for account 121418
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7664148 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 121220/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7100424, new block id 7100424 for account 121220
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7100424 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116574/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7575905, new block id 7575905 for account 116574
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7575905 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 109430/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6149003, new block id 6149003 for account 109430
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6149003 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 109124/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6821681, new block id 6821681 for account 109124
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6821681 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 180217/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8106858, new block id 8106858 for account 180217
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8106858 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 174489/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7425595, new block id 7425595 for account 174489
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7425595 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 171121/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7935739, new block id 7935739 for account 171121
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7935739 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 169395/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7385307, new block id 7385307 for account 169395
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7385307 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 169355/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7808058, new block id 7808058 for account 169355
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7808058 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 162730/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7352911, new block id 7352911 for account 162730
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7352911 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 162712/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7745543, new block id 7745543 for account 162712
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7745543 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 162687/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7428769, new block id 7428769 for account 162687
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7428769 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 159194/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7239416, new block id 7239416 for account 159194
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7239416 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 158562/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6908534, new block id 6908534 for account 158562
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6908534 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 137960/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6847231, new block id 6847231 for account 137960
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6847231 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 133451/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6858660, new block id 6858660 for account 133451
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6858660 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116528/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7560446, new block id 7560446 for account 116528
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7560446 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116397/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7533756, new block id 7533756 for account 116397
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7533756 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 92840/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6682061, new block id 6682061 for account 92840
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6682061 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 50367/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7291217, new block id 7291217 for account 50367
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7291217 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 48460/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6464852, new block id 6464852 for account 48460
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6464852 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 44117/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7556535, new block id 7556535 for account 44117
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7556535 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 42750/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7436864, new block id 7436864 for account 42750
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7436864 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 42732/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7478072, new block id 7478072 for account 42732
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7478072 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 42724/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7503653, new block id 7503653 for account 42724
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7503653 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 34035/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7191214, new block id 7191214 for account 34035
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7191214 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 167305/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8055684, new block id 8055684 for account 167305
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8055684 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 167298/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7287809, new block id 7287809 for account 167298
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7287809 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 20094/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7329354, new block id 7329354 for account 20094
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7329354 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 178722/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8106619, new block id 8106619 for account 178722
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8106619 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 174508/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7361500, new block id 7361500 for account 174508
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7361500 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 174491/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7864874, new block id 7864874 for account 174491
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7864874 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 174485/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7417411, new block id 7417411 for account 174485
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7417411 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 171141/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7557325, new block id 7557325 for account 171141
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7557325 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 167311/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7369795, new block id 7369795 for account 167311
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7369795 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 167304/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7436768, new block id 7436768 for account 167304
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7436768 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 167284/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7394154, new block id 7394154 for account 167284
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7394154 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 167283/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7768979, new block id 7768979 for account 167283
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7768979 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 164164/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7219029, new block id 7219029 for account 164164
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7219029 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 164157/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6801927, new block id 6801927 for account 164157
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6801927 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 164147/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7437265, new block id 7437265 for account 164147
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7437265 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 162686/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7385305, new block id 7385305 for account 162686
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7385305 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 159186/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7417925, new block id 7417925 for account 159186
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7417925 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 154471/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6998771, new block id 6998771 for account 154471
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6998771 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152281/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6456596, new block id 6456596 for account 152281
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6456596 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152278/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8012047, new block id 8012047 for account 152278
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8012047 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152266/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7275567, new block id 7275567 for account 152266
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7275567 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152256/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7059428, new block id 7059428 for account 152256
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7059428 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150274/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7694434, new block id 7694434 for account 150274
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7694434 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150222/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7066729, new block id 7066729 for account 150222
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7066729 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150220/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6859164, new block id 6859164 for account 150220
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6859164 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146067/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7001813, new block id 7001813 for account 146067
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7001813 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146001/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7590195, new block id 7590195 for account 146001
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7590195 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 143721/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6946460, new block id 6946460 for account 143721
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6946460 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 140381/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6552936, new block id 6552936 for account 140381
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6552936 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 138890/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7333745, new block id 7333745 for account 138890
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7333745 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 137197/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7819710, new block id 7819710 for account 137197
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7819710 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 136626/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7848188, new block id 7848188 for account 136626
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7848188 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 136595/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7478319, new block id 7478319 for account 136595
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7478319 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 126713/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7529983, new block id 7529983 for account 126713
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7529983 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 125935/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7129602, new block id 7129602 for account 125935
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7129602 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 121442/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7380734, new block id 7380734 for account 121442
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7380734 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116691/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7021486, new block id 7021486 for account 116691
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7021486 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116690/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6572397, new block id 6572397 for account 116690
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6572397 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116548/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7191401, new block id 7191401 for account 116548
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7191401 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116475/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7737731, new block id 7737731 for account 116475
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7737731 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 114275/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7385295, new block id 7385295 for account 114275
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7385295 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 111235/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7176154, new block id 7176154 for account 111235
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7176154 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 111207/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6751765, new block id 6751765 for account 111207
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6751765 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 121357/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7780471, new block id 7780471 for account 121357
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7780471 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116697/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8026410, new block id 8026410 for account 116697
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8026410 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 81233/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6591499, new block id 6591499 for account 81233
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6591499 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 164173/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6441308, new block id 6441308 for account 164173
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6441308 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 103889/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7107955, new block id 7107955 for account 103889
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7107955 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 49121/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6946710, new block id 6946710 for account 49121
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6946710 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 61226/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7229501, new block id 7229501 for account 61226
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7229501 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 81957/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7557188, new block id 7557188 for account 81957
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7557188 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116398/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8336074, new block id 8336074 for account 116398
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8336074 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 96108/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7191134, new block id 7191134 for account 96108
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7191134 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 157299/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6906196, new block id 6906196 for account 157299
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6906196 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 174501/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7126428, new block id 7126428 for account 174501
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7126428 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 150261/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7586976, new block id 7586976 for account 150261
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7586976 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 161153/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7333786, new block id 7333786 for account 161153
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7333786 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 94479/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7333702, new block id 7333702 for account 94479
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7333702 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116705/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7835249, new block id 7835249 for account 116705
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7835249 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 172825/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8136616, new block id 8136616 for account 172825
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8136616 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 67297/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7799503, new block id 7799503 for account 67297
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7799503 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 172829/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7594420, new block id 7594420 for account 172829
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7594420 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 140387/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6751959, new block id 6751959 for account 140387
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6751959 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 154502/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7039197, new block id 7039197 for account 154502
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7039197 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 154457/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6552926, new block id 6552926 for account 154457
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6552926 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 94487/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6640162, new block id 6640162 for account 94487
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6640162 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146015/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6480264, new block id 6480264 for account 146015
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6480264 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 4215/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7222767, new block id 7222767 for account 4215
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7222767 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 134661/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6930972, new block id 6930972 for account 134661
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6930972 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 130048/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7586641, new block id 7586641 for account 130048
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7586641 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 172784/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7428664, new block id 7428664 for account 172784
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7428664 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 132081/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7332806, new block id 7332806 for account 132081
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7332806 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 159198/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7239305, new block id 7239305 for account 159198
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7239305 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146004/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6909020, new block id 6909020 for account 146004
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6909020 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 48793/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7907985, new block id 7907985 for account 48793
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7907985 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 159158/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7484407, new block id 7484407 for account 159158
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7484407 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 42743/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7852787, new block id 7852787 for account 42743
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7852787 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 157328/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7388780, new block id 7388780 for account 157328
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7388780 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 119099/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7641094, new block id 7641094 for account 119099
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7641094 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 105937/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6868978, new block id 6868978 for account 105937
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6868978 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 69421/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6592846, new block id 6592846 for account 69421
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6592846 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152829/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7491452, new block id 7491452 for account 152829
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7491452 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 94504/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7360725, new block id 7360725 for account 94504
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7360725 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116682/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7190886, new block id 7190886 for account 116682
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7190886 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 136660/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7306526, new block id 7306526 for account 136660
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7306526 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 143683/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7636506, new block id 7636506 for account 143683
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7636506 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 13119/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6946651, new block id 6946651 for account 13119
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6946651 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 149206/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7948149, new block id 7948149 for account 149206
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7948149 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 83203/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7799361, new block id 7799361 for account 83203
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7799361 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 78505/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7575707, new block id 7575707 for account 78505
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7575707 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 157332/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7282976, new block id 7282976 for account 157332
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7282976 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 125938/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7219117, new block id 7219117 for account 125938
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7219117 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 154726/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7332800, new block id 7332800 for account 154726
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7332800 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 157340/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6942380, new block id 6942380 for account 157340
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6942380 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 17285/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7587589, new block id 7587589 for account 17285
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7587589 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 130595/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7448381, new block id 7448381 for account 130595
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7448381 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152297/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7085831, new block id 7085831 for account 152297
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7085831 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 56834/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 5028466, new block id 5028466 for account 56834
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 5028466 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 105903/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6972563, new block id 6972563 for account 105903
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6972563 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 105939/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7989500, new block id 7989500 for account 105939
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7989500 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 105966/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7583073, new block id 7583073 for account 105966
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7583073 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 136631/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7333692, new block id 7333692 for account 136631
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7333692 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 102889/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7877104, new block id 7877104 for account 102889
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7877104 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 35128/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7835384, new block id 7835384 for account 35128
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7835384 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 59737/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6519249, new block id 6519249 for account 59737
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6519249 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 83495/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7177295, new block id 7177295 for account 83495
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7177295 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 84274/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6713888, new block id 6713888 for account 84274
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6713888 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 93921/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7352953, new block id 7352953 for account 93921
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7352953 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 102875/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8106618, new block id 8106618 for account 102875
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8106618 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 102877/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6924140, new block id 6924140 for account 102877
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6924140 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116517/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6568975, new block id 6568975 for account 116517
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6568975 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 152299/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6906288, new block id 6906288 for account 152299
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6906288 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116586/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7483620, new block id 7483620 for account 116586
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7483620 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 130045/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7215687, new block id 7215687 for account 130045
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7215687 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 62563/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6717841, new block id 6717841 for account 62563
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6717841 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 29724/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7507301, new block id 7507301 for account 29724
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7507301 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 33604/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6639862, new block id 6639862 for account 33604
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6639862 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 33909/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8117420, new block id 8117420 for account 33909
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8117420 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 50199/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7133264, new block id 7133264 for account 50199
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7133264 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 50304/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7369854, new block id 7369854 for account 50304
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7369854 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 51524/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7357293, new block id 7357293 for account 51524
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7357293 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 58789/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6776765, new block id 6776765 for account 58789
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6776765 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 62524/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7864117, new block id 7864117 for account 62524
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7864117 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 62746/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6453038, new block id 6453038 for account 62746
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6453038 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 65495/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7385016, new block id 7385016 for account 65495
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7385016 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 66878/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7526231, new block id 7526231 for account 66878
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7526231 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 77288/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7440472, new block id 7440472 for account 77288
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7440472 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 83683/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7721552, new block id 7721552 for account 83683
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7721552 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 85614/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7219716, new block id 7219716 for account 85614
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7219716 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 89186/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6879783, new block id 6879783 for account 89186
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6879783 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 90489/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7421368, new block id 7421368 for account 90489
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7421368 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 140387/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6751959, new block id 6751959 for account 140387
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6751959 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 59752/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7243439, new block id 7243439 for account 59752
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7243439 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 116432/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 8399616, new block id 8399616 for account 116432
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 8399616 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 56834/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 5028466, new block id 5028466 for account 56834
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 5028466 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 59733/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7092471, new block id 7092471 for account 59733
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7092471 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 84480/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6614076, new block id 6614076 for account 84480
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6614076 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 96122/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6987509, new block id 6987509 for account 96122
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6987509 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 105911/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7530891, new block id 7530891 for account 105911
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7530891 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 111350/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6961300, new block id 6961300 for account 111350
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6961300 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 64133/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7483202, new block id 7483202 for account 64133
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7483202 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 109913/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 7243041, new block id 7243041 for account 109913
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 7243041 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: executing event type 'block_start' for object ID 146004/0
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: current block id 6909020, new block id 6909020 for account 146004
+Jan 06 16:45:52 ?Debug : 79d45700 DBABlock: __activate_account_block: block ID 6909020 is active
+Jan 06 16:45:52 ?Debug : 79d45700 EventScheduler: waiting 1298 sec for next event (type 'flowing_charge' for object_id 68644/1222145 at 1578305250)
+Jan 06 16:45:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:45:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:45:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:45:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 8.7e-05 sec
+Jan 06 16:45:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:46:35 ?Debug : 7882c700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:46:35 ?Debug : 7882c700 RPC2Connection: Call: 0x500b (__rpcf_get_messages_list_new)
+Jan 06 16:46:35 ?Debug : 7882c700 RPC2Connection: Real Call: 0x500b (__rpcf_get_messages_list_new)
+Jan 06 16:46:35 ?Debug : 7882c700 DBConnectionPoolImpl: [2]: connection <0x559e6acc9640> is popped
+Jan 06 16:46:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6aceb8c0> SQL query: UPDATE messages SET recv_date='1578303995' WHERE recv_date='0' AND (receiver_id='-63' OR receiver_type='4') AND send_date>='0' AND send_date<='0'
+Jan 06 16:46:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6aceb8c0> SQL query takes 0.003 sec
+Jan 06 16:46:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6aceb8c0> SQL SELECT query: SELECT m.id,sender_id,subject,message,mime,send_date,recv_date,receiver_id,receiver_type,ms.status FROM messages AS m, messages_status AS ms WHERE m.id=ms.message_id AND (((receiver_type='0' AND receiver_id='-63') OR (receiver_type='0' AND receiver_id='0') OR (receiver_type='3' AND receiver_id='1')) OR receiver_type='4' OR is_for_all='1') AND send_date>='0' AND send_date<='0' ORDER BY id DESC
+Jan 06 16:46:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6aceb8c0> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:46:35 ?Debug : 7882c700 DBConnectionPoolImpl: [2]: connection <0x559e6acc9640> is pushed back
+Jan 06 16:46:35 ?Debug : 7882c700 RPC2Connection: Call 0x500b (__rpcf_get_messages_list_new) finished in 0.00485 sec
+Jan 06 16:46:35 ?Debug : 7882c700 RPC2Connection: Stream cleared
+Jan 06 16:46:38 ?Debug : 7882c700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:46:38 ?Debug : 7882c700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:46:38 ?Debug : 7882c700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:46:38 ?Debug : 7882c700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 4.3e-05 sec
+Jan 06 16:46:38 ?Debug : 7882c700 RPC2Connection: Stream cleared
+Jan 06 16:46:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:46:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:46:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:46:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 5.7e-05 sec
+Jan 06 16:46:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:47:35 ?Debug : 7882c700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:47:35 ?Debug : 7882c700 RPC2Connection: Call: 0x500b (__rpcf_get_messages_list_new)
+Jan 06 16:47:35 ?Debug : 7882c700 RPC2Connection: Real Call: 0x500b (__rpcf_get_messages_list_new)
+Jan 06 16:47:35 ?Debug : 7882c700 DBConnectionPoolImpl: [2]: connection <0x559e6ace3140> is popped
+Jan 06 16:47:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6acf4410> SQL query: UPDATE messages SET recv_date='1578304055' WHERE recv_date='0' AND (receiver_id='-63' OR receiver_type='4') AND send_date>='0' AND send_date<='0'
+Jan 06 16:47:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6acf4410> SQL query takes 0.003 sec
+Jan 06 16:47:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6acf4410> SQL SELECT query: SELECT m.id,sender_id,subject,message,mime,send_date,recv_date,receiver_id,receiver_type,ms.status FROM messages AS m, messages_status AS ms WHERE m.id=ms.message_id AND (((receiver_type='0' AND receiver_id='-63') OR (receiver_type='0' AND receiver_id='0') OR (receiver_type='3' AND receiver_id='1')) OR receiver_type='4' OR is_for_all='1') AND send_date>='0' AND send_date<='0' ORDER BY id DESC
+Jan 06 16:47:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6acf4410> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:47:35 ?Debug : 7882c700 DBConnectionPoolImpl: [2]: connection <0x559e6ace3140> is pushed back
+Jan 06 16:47:35 ?Debug : 7882c700 RPC2Connection: Call 0x500b (__rpcf_get_messages_list_new) finished in 0.004273 sec
+Jan 06 16:47:35 ?Debug : 7882c700 RPC2Connection: Stream cleared
+Jan 06 16:47:38 ?Debug : 7882c700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:47:38 ?Debug : 7882c700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:47:38 ?Debug : 7882c700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:47:38 ?Debug : 7882c700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 7.1e-05 sec
+Jan 06 16:47:38 ?Debug : 7882c700 RPC2Connection: Stream cleared
+Jan 06 16:47:44 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:47:44 ?Debug : 78e36700 RPC2Connection: Call: 0x2044 (rpcf_get_users_list)
+Jan 06 16:47:44 ?Debug : 78e36700 RPC2Connection: Real Call: 0x2044 (rpcf_get_users_list)
+Jan 06 16:47:44 ?Debug : 78e36700 RPCServer@0.0.0.0: rpcf_get_users_list: from: 0, to:1000, cnt: 1000
+Jan 06 16:47:44 ?Debug : 78e36700 DBConnectionPoolImpl: [2]: connection <0x559e6acebdc0> is popped
+Jan 06 16:47:44 ?Debug : 78e36700 DBConnection_mysql: <0x559e6acfcfe0> SQL SELECT query: SELECT ip_group_id,ip,ip_ext,mask,mask_ext,ip_type,uname,upass,mac,allowed_cid,router_id,switch_id,port_id,vlan_id,pool_id,pool_name,id,encrypted FROM ip_groups WHERE is_deleted='0'
+Jan 06 16:47:45 ?Debug : 78e36700 DBConnection_mysql: <0x559e6acfcfe0> SQL SELECT query: 114443 rows in 0.256 sec
+Jan 06 16:47:45 ?Debug : 78e36700 DBConnection_mysql: <0x559e6acfcfe0> SQL SELECT query: SELECT id,ip_group_id FROM iptraffic_service_links WHERE is_deleted='0'
+Jan 06 16:47:45 ?Debug : 78e36700 DBConnection_mysql: <0x559e6acfcfe0> SQL SELECT query: 82018 rows in 0.043 sec
+Jan 06 16:47:45 ?Debug : 78e36700 DBConnectionPoolImpl: [2]: connection <0x559e6acebdc0> is pushed back
+Jan 06 16:47:45 ?Debug : 78e36700 RPC2Connection: Call 0x2044 (rpcf_get_users_list) finished in 0.695233 sec
+Jan 06 16:47:45 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:47:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:47:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:47:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:47:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 7.2e-05 sec
+Jan 06 16:47:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:48:35 ?Debug : 7882c700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:48:35 ?Debug : 7882c700 RPC2Connection: Call: 0x500b (__rpcf_get_messages_list_new)
+Jan 06 16:48:35 ?Debug : 7882c700 RPC2Connection: Real Call: 0x500b (__rpcf_get_messages_list_new)
+Jan 06 16:48:35 ?Debug : 7882c700 DBConnectionPoolImpl: [2]: connection <0x559e6acec330> is popped
+Jan 06 16:48:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6ad05b30> SQL query: UPDATE messages SET recv_date='1578304115' WHERE recv_date='0' AND (receiver_id='-63' OR receiver_type='4') AND send_date>='0' AND send_date<='0'
+Jan 06 16:48:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6ad05b30> SQL query takes 0.003 sec
+Jan 06 16:48:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6ad05b30> SQL SELECT query: SELECT m.id,sender_id,subject,message,mime,send_date,recv_date,receiver_id,receiver_type,ms.status FROM messages AS m, messages_status AS ms WHERE m.id=ms.message_id AND (((receiver_type='0' AND receiver_id='-63') OR (receiver_type='0' AND receiver_id='0') OR (receiver_type='3' AND receiver_id='1')) OR receiver_type='4' OR is_for_all='1') AND send_date>='0' AND send_date<='0' ORDER BY id DESC
+Jan 06 16:48:35 ?Debug : 7882c700 DBConnection_mysql: <0x559e6ad05b30> SQL SELECT query: 0 rows in 0.000 sec
+Jan 06 16:48:35 ?Debug : 7882c700 DBConnectionPoolImpl: [2]: connection <0x559e6acec330> is pushed back
+Jan 06 16:48:35 ?Debug : 7882c700 RPC2Connection: Call 0x500b (__rpcf_get_messages_list_new) finished in 0.004315 sec
+Jan 06 16:48:35 ?Debug : 7882c700 RPC2Connection: Stream cleared
+Jan 06 16:48:38 ?Debug : 7882c700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:48:38 ?Debug : 7882c700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:48:38 ?Debug : 7882c700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:48:38 ?Debug : 7882c700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 5.4e-05 sec
+Jan 06 16:48:38 ?Debug : 7882c700 RPC2Connection: Stream cleared
+Jan 06 16:48:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:48:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:48:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:48:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 4.6e-05 sec
+Jan 06 16:48:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:49:17  Info  : 7882c700 RPC2Connection: Connection terminated by peer
+Jan 06 16:49:17 ?Debug : 7882c700 RPC2Connection: Session Key <3bfe125e00000000c93a62af0c9b73d9> stored for UID -63 from <172.29.128.199>
+Jan 06 16:49:17  Info  : 7892d700 RPC2Connection: Connection terminated by peer
+Jan 06 16:49:17 ?Debug : 7892d700 RPC2Connection: Session Key <3bfe125e000000006f542e7d17bf5b25> stored for UID -63 from <172.29.128.199>
+Jan 06 16:49:17 ?Debug : 7882c700 RPC2Connection: SSL cleared
+Jan 06 16:49:17  Info  : 78a2e700 RPC2Connection: Connection terminated by peer
+Jan 06 16:49:17 ?Debug : 78a2e700 RPC2Connection: Session Key <3afe125e0000000056d87d8f255e9f2d> stored for UID -63 from <172.29.128.199>
+Jan 06 16:49:17 ?Debug : 7892d700 RPC2Connection: SSL cleared
+Jan 06 16:49:17 ?Debug : 78a2e700 RPC2Connection: SSL cleared
+Jan 06 16:49:17 ?Debug : 7882c700 ConnectionManager: connection [9] has been closed
+Jan 06 16:49:17 ?Debug : 7882c700 RPC2Connection: Session closed...
+Jan 06 16:49:17 ?Debug : 7892d700 ConnectionManager: connection [8] has been closed
+Jan 06 16:49:17 ?Debug : 7892d700 RPC2Connection: Session closed...
+Jan 06 16:49:17 ?Debug : 78a2e700 ConnectionManager: connection [7] has been closed
+Jan 06 16:49:17 ?Debug : 78a2e700 RPC2Connection: Session closed...
+Jan 06 16:49:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:49:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:49:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:49:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 7.4e-05 sec
+Jan 06 16:49:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:50:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:50:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:50:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:50:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 7.9e-05 sec
+Jan 06 16:50:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:51:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:51:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:51:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:51:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 5.3e-05 sec
+Jan 06 16:51:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:52:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:52:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:52:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:52:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 8.7e-05 sec
+Jan 06 16:52:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:53:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:53:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:53:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:53:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 4.9e-05 sec
+Jan 06 16:53:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:54:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:54:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:54:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:54:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 2.9e-05 sec
+Jan 06 16:54:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:55:35  Info  : 78a2e700 RPC2Connection: Connection from: [172.29.128.199]:44628 new Session Key <1704135e00000000640a702a0a195009>
+Jan 06 16:55:35  Info  : 78a2e700 RPC2Connection: Card user <karsakovan@172.29.128.199> is connecting
+Jan 06 16:55:35 ?Debug : 78a2e700 DBAgroups: UID -63 from system group 1
+Jan 06 16:55:35 ?Debug : 78a2e700 ConnectionManager: new connection [10] has been created
+Jan 06 16:55:35  Info  : 78a2e700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>Access granted to [SSL]<karsakovan@172.29.128.199> (UID: -63)
+Jan 06 16:55:35 ?Debug : 78a2e700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>SSL type 5 requested, using SSL/TLS method autonegotiation
+Jan 06 16:55:35 ?Debug : 78a2e700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>new SSL connection accepted uses AES256-SHA cipher
+Jan 06 16:55:35  Info  : 7882c700 RPC2Connection: Connection from: [172.29.128.199]:44630 new Session Key <1704135e00000000748f9c56f72af523>
+Jan 06 16:55:35  Info  : 7882c700 RPC2Connection: Card user <karsakovan@172.29.128.199> is connecting
+Jan 06 16:55:35 ?Debug : 7882c700 DBAgroups: UID -63 from system group 1
+Jan 06 16:55:35 ?Debug : 7882c700 ConnectionManager: new connection [11] has been created
+Jan 06 16:55:35  Info  : 7882c700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>Access granted to [SSL]<karsakovan@172.29.128.199> (UID: -63)
+Jan 06 16:55:35 ?Debug : 7882c700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>SSL type 5 requested, using SSL/TLS method autonegotiation
+Jan 06 16:55:35 ?Debug : 7882c700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>new SSL connection accepted uses AES256-SHA cipher
+Jan 06 16:55:35  Info  : 7892d700 RPC2Connection: Connection from: [172.29.128.199]:44632 new Session Key <1704135e00000000c45023245384f50a>
+Jan 06 16:55:35  Info  : 7892d700 RPC2Connection: Card user <karsakovan@172.29.128.199> is connecting
+Jan 06 16:55:35 ?Debug : 7892d700 DBAgroups: UID -63 from system group 1
+Jan 06 16:55:35 ?Debug : 7892d700 ConnectionManager: new connection [12] has been created
+Jan 06 16:55:35  Info  : 7892d700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>Access granted to [SSL]<karsakovan@172.29.128.199> (UID: -63)
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>SSL type 5 requested, using SSL/TLS method autonegotiation
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: [SSL]<karsakovan@172.29.128.199>new SSL connection accepted uses AES256-SHA cipher
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Call: 0x4417 (__rpcf_whoami)
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Real Call: 0x4417 (__rpcf_whoami)
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Call 0x4417 (__rpcf_whoami) finished in 0.00279 sec
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Stream cleared
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Call: 0x0041 (Get-Core-Version-String)
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Real Call: 0x0041 (Get-Core-Version-String)
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Call 0x0041 (Get-Core-Version-String) finished in 7.6e-05 sec
+Jan 06 16:55:35 ?Debug : 7892d700 RPC2Connection: Stream cleared
+Jan 06 16:55:41  Warn  : 78a2e700 RPC2Connection: Session closed
+Jan 06 16:55:41 ?Debug : 78a2e700 RPC2Connection: Session Key <1704135e00000000640a702a0a195009> stored for UID -63 from <172.29.128.199>
+Jan 06 16:55:41  Warn  : 7892d700 RPC2Connection: Session closed
+Jan 06 16:55:41  Warn  : 7882c700 RPC2Connection: Session closed
+Jan 06 16:55:41 ?Debug : 7882c700 RPC2Connection: Session Key <1704135e00000000748f9c56f72af523> stored for UID -63 from <172.29.128.199>
+Jan 06 16:55:41 ?Debug : 7892d700 RPC2Connection: Session Key <1704135e00000000c45023245384f50a> stored for UID -63 from <172.29.128.199>
+Jan 06 16:55:41 ?Debug : 78a2e700 RPC2Connection: SSL cleared
+Jan 06 16:55:41 ?Debug : 7882c700 RPC2Connection: SSL cleared
+Jan 06 16:55:41 ?Debug : 78a2e700 ConnectionManager: connection [10] has been closed
+Jan 06 16:55:41 ?Debug : 7892d700 RPC2Connection: SSL cleared
+Jan 06 16:55:41 ?Debug : 78a2e700 RPC2Connection: Session closed...
+Jan 06 16:55:41 ?Debug : 7882c700 ConnectionManager: connection [11] has been closed
+Jan 06 16:55:41 ?Debug : 7882c700 RPC2Connection: Session closed...
+Jan 06 16:55:41 ?Debug : 7892d700 ConnectionManager: connection [12] has been closed
+Jan 06 16:55:41 ?Debug : 7892d700 RPC2Connection: Session closed...
+Jan 06 16:55:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:55:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:55:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:55:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 7.6e-05 sec
+Jan 06 16:55:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:56:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:56:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:56:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:56:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 7.8e-05 sec
+Jan 06 16:56:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:57:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:57:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:57:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:57:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 0.000102 sec
+Jan 06 16:57:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:58:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:58:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:58:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:58:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 8.2e-05 sec
+Jan 06 16:58:55 ?Debug : 78e36700 RPC2Connection: Stream cleared
+Jan 06 16:59:55 ?Debug : 78e36700 RPC2Connection: URFA ping received, sending reply
+Jan 06 16:59:55 ?Debug : 78e36700 RPC2Connection: Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:59:55 ?Debug : 78e36700 RPC2Connection: Real Call: 0x11112 (rpcf_get_core_time)
+Jan 06 16:59:55 ?Debug : 78e36700 RPC2Connection: Call 0x11112 (rpcf_get_core_time) finished in 8.8e-05 sec
+Jan 06 16:59:55 ?Debug : 78e36700 RPC2Connection: Stream cleared

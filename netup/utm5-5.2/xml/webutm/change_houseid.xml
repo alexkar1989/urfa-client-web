@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- urfa -a change_houseid -account_id 11111 -new_house_id 23-->
+<urfa>
+	<parameter name="account_id"/> 
+	<parameter name="user_id"/>
+	<parameter name="new_house_id"/>
+	<call function="rpcf_get_user_by_account" output="0"/> 
+	<call function="rpcf_get_userinfo" output="0"/>
+	<set dst="house_id" value="new_house_id"/>
+	<call function="rpcf_edit_user_new" output="0"/>
+</urfa>

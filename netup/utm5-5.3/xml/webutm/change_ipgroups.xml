@@ -1,0 +1,116 @@
+<urfa>
+        <!--Задаем параметры-->
+	<parameter name="account_id" value="0"/>
+	<parameter name="user_id" value="0"/>
+	<parameter name="act_ip" value="0"/>
+	<parameter name="ip_new" value="0"/>
+	<parameter name="mac_new" value="0"/>
+	<parameter name="delete" value="0"/>
+	<if variable="account_id" value="0" condition="eq">
+		<error comment="Лицевой счет не найден" variable="account_id" code="1"/> 
+	</if>
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<if variable="user_id" value="0" condition="eq">
+		<error comment="Пользователь не найден" variable="user_id" code="1"/>
+	</if>
+    <!-- Получаем список услуг -->
+	<call function="rpcf_get_all_services_for_user" output="0"/>
+        <for name="i" from="0" count="slink_id_count">
+    	    <set dst="service_type_tmp" src="service_type_array" src_index="i"/>
+        	<!-- Проверяем есть ли услуга ип трафика -->
+            <if variable="service_type_tmp" value="3" condition="eq">
+        		<set dst="service_type" src="service_type_array" src_index="i"/>
+                	<set dst="slink_id" src="slink_id_array" src_index="i"/>
+					<set dst="discount_period_id" src="discount_period_id_array" src_index="i"/>
+					<!-- Получем данные по связке Трафика -->
+					<call function="rpcf_get_iptraffic_service_link_ipv6" output="0"/>
+					<set dst="tplink_id" src="tariff_link_id"/>
+                	<!--Удаление ип адреса-->
+                	<if variable="delete" value="0" condition="ne">
+                		<for name="j" from="0" count="size(ip_address)">
+                			<set dst="ip_address_tmp" src="ip_address" src_index="j"/>
+	                		<if variable="ip_address_tmp" value="act_ip" condition="eq">
+								<remove name="ip_address" array_index="j"/>
+								<remove name="mask" array_index="j"/>
+								<remove name="mac" array_index="j"/>
+								<remove name="iptraffic_login" array_index="j"/>
+								<remove name="iptraffic_password" array_index="j"/>
+								<remove name="iptraffic_allowed_cid" array_index="j"/>
+								<remove name="ip_not_vpn" array_index="j"/>
+								<remove name="dont_use_fw" array_index="j"/>
+								<remove name="router_id" array_index="j"/>
+								<remove name="switch_id" array_index="j"/>
+								<remove name="port_id" array_index="j"/>
+								<remove name="vlan_id" array_index="j"/>
+								<remove name="pool_id" array_index="j"/>
+								<set dst="ip_groups_count" value="size(ip_address)"/>
+								<call function="rpcf_edit_iptraffic_service_link_ipv6"/>
+				    		</if>
+			    		</for>
+						<break/>
+                	</if>
+					<if variable="ip_new" value="0" condition="ne">
+						<!-- Добавление нового ип адреса -->
+						<if variable="act_ip" value="0" condition="eq">
+							<set dst="ip_groups_count_old" src="ip_groups_count"/>
+							<add arg1="ip_groups_count" arg2="size(ip_new)" dst="ip_groups_count"/> 
+							<for name="g" from="ip_groups_count_old" count="size(ip_new)">
+				                <set dst="id" dst_index="g" value=""/>
+				                <set dst="ip_address" dst_index="g" src="ip_new"/>
+				                <set dst="mask" dst_index="g" value="32"/>
+				                <set dst="mac" dst_index="g" value=""/>
+				                <!-- Если нужно добавить не пустой MAC-->
+				                <if variable="mac_new" value="0" condition="ne">
+				                	<set dst="mac" dst_index="g" src="mac_new"/>
+				            	</if>
+				            	<set dst="iptraffic_login" dst_index="g" value=""/>
+				            	<set dst="iptraffic_password" dst_index="g" value=""/>
+				            	<set dst="iptraffic_allowed_cid" dst_index="g" value=""/>
+				            	<set dst="pool_name" dst_index="g" value=""/>
+								<set dst="ip_not_vpn" dst_index="g" value="1"/>
+				            	<set dst="dont_use_fw" dst_index="g" value="0"/>
+				            	<set dst="router_id" dst_index="g" value="0"/>
+				            	<set dst="switch_id" dst_index="g" value="0"/>
+				            	<set dst="port_id" dst_index="g" value="0"/>
+				            	<set dst="vlan_id" dst_index="g" value="0"/>
+				            	<set dst="pool_id" dst_index="g" value="0"/>
+				            	<set dst="dhcp_options_size" dst_index="g" value="0"/>
+				                <set dst="quotas_count" value="size(quota)"/>
+								<call function="rpcf_edit_iptraffic_service_link_ipv6"/>
+			            	</for>
+							<break/>
+						</if>
+						<!-- Изменение ип адреса -->
+						<if variable="act_ip" value="0" condition="ne">
+							<for name="g" from="0" count="ip_groups_count">
+								<set dst="find_ip" src="ip_address" src_index="g"/>
+								<if variable="act_ip" value="find_ip" condition="eq">
+									<set dst="id" dst_index="g" value=""/>
+					                <set dst="ip_address" dst_index="g" src="ip_new"/>
+					                <!-- Если нужно еще сменить MAC-->
+					                <if variable="mac_new" value="0" condition="ne">
+					                	<set dst="mac" dst_index="g" src="mac_new"/>
+					            	</if>
+									<call function="rpcf_edit_iptraffic_service_link_ipv6"/>
+								</if>
+							</for>
+							<break/>
+						</if>
+					</if>
+					<!-- Изменение MAC адреса -->
+					<if variable="act_ip" value="0" condition="ne"> 
+						<if variable="mac_new" value="0" condition="ne">
+							<for name="g" from="0" count="ip_groups_count">
+								<set dst="find_ip" src="ip_address" src_index="g"/>
+								<if variable="act_ip" value="find_ip" condition="eq">
+									<set dst="id" dst_index="g" value=""/>
+					                <set dst="mac" dst_index="g" src="mac_new"/>
+									<call function="rpcf_edit_iptraffic_service_link_ipv6"/>
+								</if>
+							</for>
+							<break/>
+						</if>
+					</if>
+			</if>
+		</for>
+</urfa>

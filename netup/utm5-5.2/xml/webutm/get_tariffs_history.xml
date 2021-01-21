@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -a get_tariffs_history -aid 1 -->
+<urfa>
+	<parameter name="aid"/>
+	<call function="rpcf_get_tariffs_history"/>
+</urfa>

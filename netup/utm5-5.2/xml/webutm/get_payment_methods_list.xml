@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -a get_payment_methods_list -id_method 1  -->
+<urfa>
+	<parameter name="id_method" value="0"/>
+	<if variable="id_method" value="0" condition="eq">
+		<call function="rpcf_get_payment_methods_list"/>
+	</if>
+	<if variable="id_method" value="0" condition="ne">
+		<call function="rpcf_get_payment_methods_list" output="0"/>
+		<for name="i" from="0" count="payments_list_count">
+			<set dst="id_tmp" src="id" src_index="i"/>
+			<set dst="name_tmp" src="name" src_index="i"/>
+			<if variable="id_tmp" value="id_method" condition="eq">
+				<out var="name_tmp"/>
+			</if>
+		</for>
+	</if>
+</urfa>

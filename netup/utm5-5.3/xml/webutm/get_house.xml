@@ -1,0 +1,5 @@
+<urfa>
+	<parameter name="house_id"/>
+	<call function="rpcf_get_house" output="0"/>
+	<out var="post_code"/>
+</urfa>

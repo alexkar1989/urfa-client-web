@@ -1,0 +1,30 @@
+Order Deny,Allow
+Deny from all
+Allow from 127.0.0.1
+Allow from 5.189.199.118
+Allow from 5.189.199.123
+Allow from 172.24.130.199
+Allow from 172.24.130.123
+Allow from 172.24.130.240
+Allow from 172.24.130.81
+
+AddDefaultCharset utf-8
+php_flag display_errors off
+php_flag display_startup_errors of
+
+php_value max_execution_time 20
+
+Header set Access-Control-Allow-Origin *
+Header set Access-Control-Allow-Headers *
+
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php [L,QSA]

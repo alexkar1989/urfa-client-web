@@ -1,0 +1,67 @@
+<urfa>
+<!-- -a add_tariff -account_id 1 -new_tariff 1 -discount_period_id 1 -ip_tmp X.X.X.X -mac_tmp 00:00:99:99:00:00-->
+<!-- Передаем переменные -->
+        <parameter name="account_id" value="0"/>
+        <parameter name="new_tariff" value="0"/>
+        <parameter name="discount_period_id" value="0"/>
+        <parameter name="ip_tmp" value="0"/>
+        <parameter name="mac_tmp" value=""/>
+        <parameter name="ip_not_vpn_tmp" value="1"/>
+<!-- Проверка условий-->
+                <if variable="account_id" value="0" condition="eq">
+                        <message text="ОШИБКА: Не передат л.с. для смены тарифа"/>
+                        <break/>
+                </if>
+                <if variable="new_tariff" value="0" condition="eq">
+                        <message text="ОШИБКА: Новый тариф не выбран"/>
+                        <break/>
+                </if>
+                <if variable="new_tariff" value="" condition="eq">
+                        <message text="ОШИБКА: Новый тариф не выбран"/>
+                        <break/>
+                </if>
+		<call function="rpcf_get_user_by_account" output="0"/>
+	        <call function="rpcf_get_user_tariffs" output="0"/>
+                <if variable="user_tariffs_size" value="0" condition="ne">
+                        <message text="ОШИБКА: Тариф присутствует, добавление второго не возможно"/>
+                        <break/>
+                </if>
+<!-- Перемещаем нужные значения в tmp массив  -->
+	<for name="s" from="0" count="size(ip_tmp)">
+	        <set dst="ip_address" dst_index="s" src="ip_tmp" src_index="s"/>
+        	<set dst="mac" dst_index="s" src="mac_tmp" src_index="s" />
+                <set dst="ip_not_vpn" dst_index="s" src="ip_not_vpn_tmp"/>
+	</for>
+<!-- Подключаем тариф-->
+	        <set dst="tariff_current" src="new_tariff" />
+                <set dst="tariff_link_id" value="0"/>
+                <call function="rpcf_link_user_tariff" output="0"/>
+                <set dst="tariff_id" src="new_tariff"/>
+<!-- Получаем инфу о тарифе-->
+                <call function="rpcf_get_tariff_new" output="0"/> 
+                        <for name="j" from="0" count="services_count">
+                                <set dst="service_id" src="service_id_array" src_index="j"/>
+                                <set dst="service_type" src="service_type_array" src_index="j"/>
+                                <set dst="link_by_default" src="link_by_default_array" src_index="j"/>
+<!-- Подключаем услуги по умолчанию -->
+<!-- Разовая услуга -->
+                                        <if variable="service_type" value="1" condition="eq">
+                                                <set dst="unabon" value="1"/>
+                                                <call function="rpcf_add_once_slink_ex" output="0" />
+                                        </if>
+<!-- Переодическая услуга -->
+                                        <if variable="service_type" value="2" condition="eq">
+                                                <set dst="start_date" value="now()"/>
+                                                <set dst="expire_date" value="max_time()"/>
+                                                <set dst="unabon" value="1"/>
+                                                <call function="rpcf_add_periodic_slink_ex"/>
+                                        </if>
+<!-- Услуга ИП трафика-->
+                                        <if variable="service_type" value="3" condition="eq">
+                                                        <set dst="start_date" value="now()"/>
+                                                        <set dst="expire_date" value="max_time()"/>
+                                                        <call function="rpcf_add_ip_slink_ex" />
+                                        </if>
+                        </for>
+</urfa>
+

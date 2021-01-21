@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- urfa -h 172.29.128.111 -l urfacli -p urfacli -a get_all_services_for_user -account_id -->
+<urfa>
+        <parameter name="account_id" comment="User account ID"/>
+        <call function="rpcf_get_all_services_for_user" output="0"/>
+        <for name="i" from="0" count="slink_id_count">
+                <set dst="service_type_tmp" src="service_type_array" src_index="i"/>
+                <set dst="slink_id_array_tmp" src="slink_id_array" src_index="i"/>
+                <if variable="service_type_tmp" value="3" condition="eq">
+                        <set dst="service_type" src="service_type_array" src_index="i"/>
+                        <set dst="slink_id" src="slink_id_array" src_index="i"/>
+                        <call function="rpcf_get_iptraffic_service_link_ipv6"/>
+                        <for name="q" from="0" count="ip_groups_count">
+                                <set src="ip_address" src_index="q" dst="ip_tmp" dst_index="q"/>
+                                <set src="mac" src_index="q" dst="mac_tmp" dst_index="q"/>
+                        </for>
+                </if>
+        </for>
+</urfa>
+

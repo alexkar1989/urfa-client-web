@@ -1,0 +1,219 @@
+-- Verificator
+-- You have to backup UTM5 database!
+-- Affected tables list at the end of file
+
+-- WARNING lost IP group 244728
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='244728';
+
+-- WARNING lost IP group 246230
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='246230';
+
+-- WARNING lost IP group 246764
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='246764';
+
+-- WARNING lost IP group 247048
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='247048';
+
+-- WARNING lost IP group 247119
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='247119';
+
+-- WARNING lost IP group 247573
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='247573';
+
+-- WARNING lost IP group 249408
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='249408';
+
+-- WARNING lost IP group 250538
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='250538';
+
+-- WARNING lost IP group 252365
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='252365';
+
+-- WARNING lost IP group 252373
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='252373';
+
+-- WARNING lost IP group 253344
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='253344';
+
+-- WARNING lost IP group 253596
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='253596';
+
+-- WARNING lost IP group 254407
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='254407';
+
+-- WARNING lost IP group 254506
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='254506';
+
+-- WARNING lost IP group 257573
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='257573';
+
+-- WARNING lost IP group 259339
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='259339';
+
+-- WARNING lost IP group 260120
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='260120';
+
+-- WARNING lost IP group 261941
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='261941';
+
+-- WARNING lost IP group 264224
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='264224';
+
+-- WARNING lost IP group 265350
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='265350';
+
+-- WARNING lost IP group 265364
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='265364';
+
+-- WARNING lost IP group 265585
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='265585';
+
+-- WARNING lost IP group 265842
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='265842';
+
+-- WARNING lost IP group 268253
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='268253';
+
+-- WARNING lost IP group 268429
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='268429';
+
+-- WARNING lost IP group 269049
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='269049';
+
+-- WARNING lost IP group 269183
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='269183';
+
+-- WARNING lost IP group 269473
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='269473';
+
+-- WARNING lost IP group 270841
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='270841';
+
+-- WARNING lost IP group 271998
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='271998';
+
+-- WARNING lost IP group 272293
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='272293';
+
+-- WARNING lost IP group 272654
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='272654';
+
+-- WARNING lost IP group 272920
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='272920';
+
+-- WARNING lost IP group 273892
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='273892';
+
+-- WARNING lost IP group 274032
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='274032';
+
+-- WARNING lost IP group 274324
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='274324';
+
+-- WARNING lost IP group 274344
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='274344';
+
+-- WARNING lost IP group 275126
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='275126';
+
+-- WARNING lost IP group 275249
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='275249';
+
+-- WARNING lost IP group 275582
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='275582';
+
+-- WARNING lost IP group 275724
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='275724';
+
+-- WARNING lost IP group 276814
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='276814';
+
+-- WARNING lost IP group 278122
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='278122';
+
+-- WARNING lost IP group 278514
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='278514';
+
+-- WARNING lost IP group 279838
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='279838';
+
+-- WARNING lost IP group 280223
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='280223';
+
+-- WARNING lost IP group 281683
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='281683';
+
+-- WARNING lost IP group 281711
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='281711';
+
+-- WARNING lost IP group 284063
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='284063';
+
+-- WARNING lost IP group 284934
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='284934';
+
+-- WARNING lost IP group 285738
+-- SQL DESC delete ip group
+DELETE FROM ip_groups WHERE ip_group_id='285738';
+
+-- ERROR service link duplication records found in dtagg_periodic table
+-- SQL DESC execute /netup/utm5/log/verificator.sql
+UPDATE dtagg_periodic SET is_closed = '1' WHERE id = '181629';
+
+-- ERROR service link duplication records found in dtagg_periodic table
+-- SQL DESC execute /netup/utm5/log/verificator.sql
+UPDATE dtagg_periodic SET is_closed = '1' WHERE id = '181641';
+
+-- 2 errors
+-- 51 warnings
+-- affected tables: dtagg_periodic ip_groups

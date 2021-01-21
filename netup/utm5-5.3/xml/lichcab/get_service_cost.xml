@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<urfa>
+	<parameter name="account_id" default="0"/>
+	<parameter name="get_cost" default="0"/>
+	<if variable="account_id" value="0" condition="eq">
+		<break/>
+	</if>
+	<call function="rpcf_get_all_services_for_user" output="0"/>
+	<out var="slink_id_count"/>
+		<if variable="get_cost" value="0" condition="eq">
+			<for name="k" from="0" count="slink_id_count">
+				<set dst="service_id_tmp" src="service_id_array" src_index="k"/>
+				<out var="service_id_tmp"/>
+			</for>
+		</if> 
+		<if variable="get_cost" value="1" condition="eq">
+			<for name="i" from="0" count="slink_id_count">
+				<set dst="tariff_name_tmp" src="tariff_name_array" src_index="i"/>
+					<if variable="tariff_name_tmp" value="No" condition="eq">
+						<set dst="service_cost" src="service_cost_array" src_index="i"/>
+						<out var="service_cost"/>
+					</if>
+			</for>
+		</if>
+</urfa>
+

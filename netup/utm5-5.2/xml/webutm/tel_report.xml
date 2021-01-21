@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -a tel_report -user_id 1 -->
+<urfa>
+<!--        <parameter name="user_id"/>-->
+<!--        <parameter name="account_id" default="0"/>-->
+<!--        <parameter name="apid"/>-->
+        <parameter name="time_start"/>
+        <parameter name="time_end" default="now()"/>
+        <call function="rpcf_user5_get_tel_report"/>
+<!--        <parameter name="time_start"/>
+        <parameter name="time_end"/>
+        <call function="rpcf_user5_get_tel_report"/>-->
+</urfa>
+

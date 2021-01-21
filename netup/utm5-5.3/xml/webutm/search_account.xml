@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -a search_users -user_id/account_id/-search_act_address/-search_ip/-search_full_name/-search_mac  -->
+<urfa>
+        <parameter name="search_type"/>
+        <parameter name="search_equally"/>
+        <parameter name="search_value"/>
+        
+        <set dst="pole_code_array" dst_index="0" value="12"/>
+        <set dst="pole_code_array" dst_index="1" value="10"/>
+        <set dst="pole_code_array" dst_index="2" value="6"/>
+        <set dst="pole_code_array" dst_index="3" value="18"/>
+        
+        <set dst="size" value="size(search_type)"/>
+        
+        <if variable="size" value="0" condition="eq">
+            <error comment="Нет параметров для поиска!" variable="search"/>
+        </if>
+        
+        <for name="j" from="0" count="size">
+		<set dst="select_type" dst_index="j" src="j"/>
+		<set dst="what_id" dst_index="j" src="search_type" src_index="j"/>
+		<set dst="criteria_id" dst_index="j" src="search_equally" src_index="j"/>
+		<set dst="pattern" dst_index="j" src="search_value" src_index="j"/>
+	</for>
+		
+	<call function="rpcf_search_users_new"/>
+        <if variable="user_data_size" value="0" condition="eq">
+            <error comment="Ничего не найдено!" variable="search"/>
+        </if>
+</urfa>	
+

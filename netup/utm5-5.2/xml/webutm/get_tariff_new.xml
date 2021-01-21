@@ -1,0 +1,8 @@
+<urfa>
+	<parameter name="tariff_id"/>
+	<if variable="tariff_id" value="0" condition="eq">
+		<break/>
+	</if>
+	<call function="rpcf_get_tariff_new" output="0"/>
+	<out var="tariff_name"/>
+</urfa>

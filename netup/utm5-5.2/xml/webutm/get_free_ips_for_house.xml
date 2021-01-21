@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<urfa>
+	<parameter name="house_id"/>
+	<call function="rpcf_get_free_ips_for_house"/>
+</urfa>

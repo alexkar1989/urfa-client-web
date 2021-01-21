@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<urfa>
+    <parameter name="user_id"/>
+    <call function="rpcf_get_userinfo" output="0"/>
+    <if variable="user_id" value="" condition="eq">
+        <error comment="Ид пользователя не передан" variable="user_id"/>
+    </if>
+    <parameter name="login" comment="User login"/>
+    <parameter name="password" comment="User password"/>
+    <parameter name="full_name" comment="Full name"/>
+    <parameter name="is_juridical" comment="1 if juridical person, else 0"/>
+    <parameter name="jur_address" comment="Juridical address"/>
+    <parameter name="act_address" comment="Actual address"/>
+    <parameter name="work_tel" comment="Work telephone"/>
+    <parameter name="home_tel" comment="Home telephone"/>
+    <parameter name="mob_tel" comment="Mobile telephone"/>
+    <parameter name="web_page" comment="Web page"/>
+    <parameter name="icq_number" comment="ICQ number"/>
+    <parameter name="tax_number" comment="TAX number"/>
+    <parameter name="kpp_number" comment="KPP number"/>
+    <parameter name="bank_id" comment="Integer bank ID"/>
+    <parameter name="bank_account" comment="Bank account"/>
+    <parameter name="comments" comment="Comments"/>
+    <parameter name="personal_manager" comment="Personal manager"/>
+    <parameter name="connect_date" comment="Unix-timestamp connect date"/>
+    <parameter name="email" comment="e-mail address"/>
+    <parameter name="is_send_invoice" comment="1 if send invoices to e-mail, else 0"/>
+    <parameter name="advance_payment" comment="1 if advance payments enabled, else 0"/>
+    <parameter name="house_id" comment="Integer house ID"/>
+    <parameter name="flat_number" comment="Flat number"/>
+    <parameter name="entrance" comment="Entrance"/>
+    <parameter name="floor" comment="Floor"/>
+    <parameter name="district" comment="District"/>
+    <parameter name="building" comment="Building"/>
+    <parameter name="parameter_id" comment="Additional parameter ID"/>
+    <parameter name="parameter_value" comment="Additional parameter value"/>
+    <call function="rpcf_edit_user_new"/>
+</urfa>

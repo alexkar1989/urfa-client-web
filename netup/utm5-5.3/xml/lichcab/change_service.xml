@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urfa>
+	<parameter name="account_id"/>
+	<parameter name="service_to_del" value="0"/>
+	<parameter name="service_to_add" value="0"/>
+        <set dst="unabon" value="1"/>
+        <set dst="policy_id" value="1"/>
+    	<set dst="start_date" value="now()"/>
+	<set dst="expire_date" value="max_time()"/>
+	<if variable="account_id" value="0" condition="eq">
+		<break/>
+	</if>
+	<if variable="service_to_del" value="0" condition="eq">
+		<break/>
+	</if>
+	<if variable="service_to_add" value="0" condition="eq">
+		<break/>
+	</if>
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_get_all_services_for_user" output="0"/>
+        <for name="i" from="0" count="slink_id_count">
+                <set dst="service_id_tmp" src="service_id_array" src_index="i"/>
+		<if variable="service_id_tmp" value="service_to_del" condition="eq">
+				<set dst="discount_period_id" src="discount_period_id_array" src_index="i"/>
+                                <set dst="slink_id" src="slink_id_array" src_index="i"/>
+				<call function="rpcf_delete_slink" output="0"/>
+				<set dst="service_id" src="service_to_add"/>
+				<call function="rpcf_add_periodic_slink_ex" output="0"/>
+		</if>
+	</for>
+</urfa>

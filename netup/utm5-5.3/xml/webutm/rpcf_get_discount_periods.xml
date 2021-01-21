@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- urfa -h 172.29.128.111 -l urfacli -p urfacli -a rpcf_get_discount_periods  -->
+
+<urfa>
+	<call function="rpcf_get_discount_periods"/>
+<!--
+	<call function="rpcf_get_discount_periods" output="0"/>
+	<for name="i" from="0" count="discount_periods_count">
+	<set dst="static_id_tmp" src="static_id" src_index="i"/>
+		<if variable="static_id_tmp" value="138" condition="eq">
+		<set dst="discount_period_id_tmp" src="discount_period_id" src_index="i"/>	
+		<set dst="start_date_tmp" src="start_date" src_index="i"/>
+		<out var="discount_period_id_tmp"/>
+		<out var="start_date_tmp"/>
+		<break/>
+		</if>
+	</for>
+-->
+</urfa>
+

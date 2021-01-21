@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- ########  STROKA ZAPUSKA  #######
+	-a rpcf_edit_user_new -user_id 117287 -login test -->
+
+<urfa>
+	 <parameter name="account_id" value="0"/>
+	 <parameter name="mobile_tel" value="0"/>
+	 <parameter name="param_value" value="0"/>
+	 <parameter name="param_id" value="0"/>
+	 <parameter name="newpassword" value="0"/>
+	 <call function="rpcf_get_user_by_account" output="0"/>
+	 <if variable="account_id" value="0" condition="eq">
+                <break/>
+         </if>
+	 <call function="rpcf_get_userinfo" output="0"/>
+	 <if variable="newpassword" value="0" condition="ne">
+		 <set dst="password" src="newpassword"/>
+	 </if>
+	 <if variable="mobile_tel" value="0" condition="ne">
+		 <set dst="mob_tel" src="mobile_tel"/>
+	 </if>
+	 <if variable="param_id" value="0" condition="ne">
+		<for name="j" from="0" count="size(parameter_id)">
+                <set dst="parameter_id_tmp" src="parameter_id" src_index="j"/>
+                <set dst="parameter_value_tmp" src="parameter_value" src_index="j"/>
+                        <if variable="parameter_id_tmp" value="param_id" condition="eq">
+                                <set dst="parameter_value" src="param_value" dst_index="j"/>
+                        </if>
+        	</for>
+	 </if>
+	 <call function="rpcf_edit_user_new"/>
+</urfa>
+

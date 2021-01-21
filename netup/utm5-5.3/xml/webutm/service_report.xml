@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -a service_report -user_id 1 -->
+<urfa>
+	
+        <parameter name="account_id" value="0"/>
+        <parameter name="time_start"/>
+        <parameter name="time_end"/>
+	<call function="rpcf_get_user_by_account" output="0"/>	
+        <call function="rpcf_service_report_new"/>
+
+</urfa>

@@ -1,0 +1,17 @@
+ Info  : Sep 08 17:36:57 b7771740 UTM5 Logger: New `?Debug : ' stream: /netup/utm5/log/debug.log
+ Info  : Sep 08 17:36:57 b7771740 UTM5 Logger: New ` Info  : ' stream: /netup/utm5/log/main.log
+?Debug : Sep 08 17:36:57 b7771740 UTM5 Core: Unable to delete verificator log file '/netup/utm5/log/verificator.log'
+?Debug : Sep 08 17:36:57 b7771740 ModMap: Module <config> exist
+?Debug : Sep 08 17:36:57 b7771740 ModMap: Module <logger> exist
+?Debug : Sep 08 17:36:57 b7771740 ModMap: Module <rehash> exist
+ Info  : Sep 08 17:36:57 b7771740 DBA:Ctx: Creating 64 user DB connections
+ Info  : Sep 08 17:36:57 b7771740 DBA:Ctx: Creating 64 system DB connections
+?Debug : Sep 08 17:36:57 b7771740 DBCtx: Connecting to MySQL database
+?Debug : Sep 08 17:36:57 b7771740 DBCtx: Connection parameters username: UTM5tmp; dbname: UTM5_88 host: 172.29.128.108
+?Debug : Sep 08 17:36:57 b7771740 DBCtx: Setting database character set to <utf8>
+ Notice: Sep 08 17:37:02 b7771740 ModMap: Log file reopened
+-Stats : Sep 08 17:37:02 b7771740 UTM5 Config: 	Stats for 5s. (uptime 5). Events: 0 (all 0); Errors: 0 (all 0)
+-Stats : Sep 08 17:37:02 b7771740 DBA:Ctx: 	Stats for 5s. (uptime 5). Events: 0 (all 0); Errors: 0 (all 0)
+-Stats : Sep 08 17:37:02 b7771740 UTM5 Logger: 	Stats for 5s. (uptime 5). Events: 15 (all 15); Errors: 0 (all 0)
+-Stats : Sep 08 17:37:02 b7771740 Rehash: 	Stats for 5s. (uptime 5). Events: 0 (all 0); Errors: 0 (all 0)
+-Stats : Sep 08 17:37:02 b7771740 ModMap: 	Stats for 5s. (uptime 5). Events: 3 (all 3); Errors: 0 (all 0)

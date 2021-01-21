@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!-- -a lichkab/set_suspence -account_id 59659 -comment_tmp Приост -set 1 -block_id 574274  -->
+<!--
+<urfa>
+	<parameter name="account_id" value="0"/>
+	<parameter name="comment_tmp" value=""/>
+	<parameter name="set" value="0"/>
+	<parameter name="block_id" value="0"/>
+	<parameter name="complete" value="complete"/>
+	<if variable="account_id" value="0" condition="eq">
+		<break/>
+	</if>	
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_get_userinfo" output="0"/>
+	<set dst="group_id" value="1000"/>
+	<if variable="set" value="1" condition="eq">
+       		<call function="rpcf_add_group_to_user" output="0"/>
+		<set dst="is_blocked" value="16"/>
+		<call function="rpcf_block_account" output="0"/> 
+		<out var="complete"/>
+	</if>
+	<if variable="set" value="0" condition="eq">
+		<set dst="id" src="block_id"/>
+		<call function="rpcf_delete_block" output="0"/> 
+		<call function="rpcf_remove_user_from_group" output="0"/>
+		<set dst="need_block" value="0"/>
+		<call function="rpcf_change_intstat_for_user" output="0"/>
+		<out var="complete"/>
+	</if>
+</urfa>
+-->
+<!-- -a save_account -account_id 1  -->
+<urfa>
+        <parameter name="account_id" value="0"/>
+		<parameter name="complete" value="complete"/>
+		<parameter name="set" value="0"/>
+		<if variable="account_id" value="0" condition="eq">
+			<message text="ОШИБКА:Л.С. пользователя не найден"/>
+			<break/>
+		</if>
+        <call function="rpcf_get_user_by_account" output="0"/>
+        <call function="rpcf_get_accountinfo" output="0"/>
+		<set dst="group_id" value="1000"/>
+		<if variable="set" value="1" condition="eq">
+			<set dst="is_blocked" value="768"/>
+			<set dst="int_status" value="0"/>
+	        <call function="rpcf_save_account" output="0"/>
+			<call function="rpcf_add_group_to_user" output="0"/>
+			<call function="rpcf_get_accountinfo" output="0"/>
+			<out var="complete"/>
+		</if>
+		<if variable="set" value="0" condition="eq">
+			<set dst="is_blocked" value="0"/>
+			<set dst="int_status" value="1"/>
+    	    <call function="rpcf_save_account" output="0"/>
+			<call function="rpcf_remove_user_from_group" output="0"/>
+			<if variable="is_blocked" value="0" condition="eq">
+				<out var="complete"/>
+			</if>
+		</if>
+</urfa>
+

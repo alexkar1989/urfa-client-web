@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<urfa>
+<!-- -a change_tarriff -account_id 1 -new_tariff 1 --> 
+	<parameter name="account_id" value="0"/>
+	<parameter name="new_tariff" value="0"/>
+                <if variable="account_id" value="0" condition="eq">
+			<error comment="Не передат л.с. для смены тарифа" variable="account_id"/>
+                </if>
+		<if variable="new_tariff" value="0" condition="eq">
+			<error comment="Новый тариф не выбран" variable="new_tariff"/>
+		</if>
+		<if variable="new_tariff" value="" condition="eq">
+			<error comment="Новый тариф не выбран" variable="new_tariff"/>
+		</if>
+		
+	<!-- Poluchaem dannie i tariff polzovatelya-->
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_get_user_tariffs" output="0"/>
+		<if variable="user_tariffs_size" value="0" condition="eq">
+			<error comment="Нет тарифа"/>
+		</if>
+	<for name="w" from="0" count="user_tariffs_size">
+	        <set dst="tariff_current_array_tmp" src="tariff_current_array" src_index="w"/>
+		<if variable="tariff_current_array_tmp" value="new_tariff" condition="eq">
+			<error comment="Новый тариф совпадает с текущим"/>
+		</if>
+	<!-- Pulichaem spisok uslug -->
+		<call function="rpcf_get_all_services_for_user" output="0"/>
+			<for name="i" from="0" count="slink_id_count">
+                		<set dst="service_type_tmp" src="service_type_array" src_index="i"/>
+	                        <set dst="tariff_name_array_tmp" src="tariff_name_array" src_index="i"/>
+	                        <set dst="slink_id_array_tmp" src="slink_id_array" src_index="i"/>
+	<!-- Proverjaem esli uslugi est' iptraffic -->
+			        	<if variable="service_type_tmp" value="3" condition="eq">
+			       		        <set dst="service_type" src="service_type_array" src_index="i"/>
+                				<set dst="slink_id" src="slink_id_array" src_index="i"/>
+	<!--Zopominaem -->
+
+		                                <call function="rpcf_get_iptraffic_service_link" output="0"/>
+                		                <for name="q" from="0" count="ip_groups_count">
+                                		        <set src="ip_address" src_index="q" dst="ip_tmp" dst_index="q"/>
+		                                        <set src="mac" src_index="q" dst="mac_tmp" dst_index="q"/>
+						</for>
+
+					</if>
+	<!-- Udalyaem servisnie svyazki-->
+					<if variable="tariff_name_array_tmp" value="No" condition="ne">
+                        	        	<set dst="slink_id" src="slink_id_array_tmp"/>
+	                        	        <call function="rpcf_delete_slink" output="0"/>
+	                                </if>
+
+			</for>
+	<!-- Udalyaem tariff-->
+	       	<set dst="tariff_link_id" src="tariff_link_id_array" src_index="w"/>
+		<call function="rpcf_unlink_user_tariff" output="0"/>
+	<!-- Podkluchaem noviy tariff-->
+		<set dst="tariff_current" src="new_tariff" />
+	<!-- Period berem starogo tariffa-->
+	        <set dst="discount_period_id" src="discount_period_id_array"/>
+		<set dst="tariff_link_id" value="0"/>
+	        <call function="rpcf_link_user_tariff"/> 
+		<set dst="tariff_id" src="new_tariff"/>
+	<!-- Pouchaem infu o tariffe-->
+       		<call function="rpcf_get_tariff_new" output="0"/> 
+			<for name="j" from="0" count="services_count">
+        	                <set dst="service_id" src="service_id_array" src_index="j"/>
+                	        <set dst="service_type" src="service_type_array" src_index="j"/>
+                        	<set dst="link_by_default" src="link_by_default_array" src_index="j"/>
+	<!-- Podkluchaem default service -->
+	        	                <if variable="service_type" value="1" condition="eq">
+        	       		                <set dst="unabon" value="1"/>
+                       			        <call function="rpcf_add_once_slink_ex" output="0" />
+	                        	</if>
+		                        <if variable="service_type" value="2" condition="eq">
+		                                <set dst="start_date" value="now()"/>
+                		                <set dst="expire_date" value="max_time()"/>
+        		                        <set dst="unabon" value="1"/>
+                        		        <call function="rpcf_add_periodic_slink_ex" output="0"/>
+					</if>
+				       	<if variable="service_type" value="3" condition="eq">
+        	        		                <set dst="start_date" value="now()"/>
+			                                <set dst="expire_date" value="max_time()"/>
+							<call function="rpcf_add_ip_slink_ex" output="0"/>
+
+							<for name="k" from="0" count="size(ip_tmp)">
+		               	        		<set dst="ip_address" src="ip_tmp" dst_index="k"/>
+							<set dst="mac" src="mac_tmp" dst_index="k"/>
+						</for> 
+
+					</if> 
+			</for>
+	</for>
+</urfa>
+

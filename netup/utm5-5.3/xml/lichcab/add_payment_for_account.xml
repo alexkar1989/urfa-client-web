@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- ########  STROKA ZAPUSKA  #######
+             -a rpcf_add_payment_for_account_notify -account_id 117313 - payment_incurrency 150 -actual_date 1453280000 -burn_time 1453280000 -method 7 --> 
+<urfa>
+      <parameter name="account_id"/>      
+      <parameter name="payment_incurrency"/>
+      <parameter name="method"/>
+      <parameter name="burn_time"/>
+      <parameter name="param" value="0"/>
+      <parameter name="currency_id" value="810"/>
+      <parameter name="actual_date" value="now()"/>
+      <parameter name="admin_comment" value=""/>
+      <parameter name="comment" value=""/>
+      <parameter name="payment_ext_number" value=""/>
+      <parameter name="payment_to_invoice" value="0"/>
+      <parameter name="turn_on_inet" value="1" />
+      <parameter name="notify" value=""/>
+      <parameter name="hash" value=""/>
+      <call function="rpcf_add_payment_for_account_notify"/>
+</urfa>

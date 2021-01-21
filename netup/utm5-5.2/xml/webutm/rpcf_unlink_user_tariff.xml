@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!-- urfa -h 172.29.128.111 -l urfacli -p urfacli -a rpcf_unlink_user_tariff -account_id 1 -tariff_link_id_remove 65  -->
+
+<urfa>
+	<parameter name="account_id" value="0"/>
+	<parameter name="tariff_link_id_remove" value="0"/>
+	<if variable="tariff_link_id_remove" value="0" condition="eq">
+		<message text="ОШИБКА: Тариф не выбран"/>
+		<break/>
+	</if>
+	<if variable="account_id" value="0" condition="eq">
+		<message text="ОШИБКА: Л.С. не выбран"/>
+		<break/>
+	</if>
+	<call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_get_user_tariffs" output="0"/>
+	<set dst="tariff_id" src="tariff_current_array"/>
+	<set dst="tariff_link_id_tmp" src="tariff_link_id_array"/>
+        <if variable="user_tariffs_size" value="0" condition="eq">
+		<message text="ОШИБКА: Нет тарифа"/>
+                <break/>
+        </if>
+	<if variable="tariff_link_id_tmp" value="tariff_link_id_remove" condition="ne">
+		<message text="ОШИБКА: Подключеный тариф и введеный не совпадают"/>
+		<break/>
+	</if>
+	<call function="rpcf_get_tariff_new" output="0"/>
+	<call function="rpcf_get_all_services_for_user" output="0"/>
+                        <for name="i" from="0" count="slink_id_count">
+                                <set dst="tariff_name_array_tmp" src="tariff_name_array" src_index="i"/>
+                                <set dst="slink_id_array_tmp" src="slink_id_array" src_index="i"/>
+				<if variable="tariff_name_array_tmp" value="No" condition="ne">
+			        	<set dst="slink_id" src="slink_id_array_tmp"/>
+					<if variable="tariff_name_array_tmp" value="tariff_name" condition="eq">
+				        	<call function="rpcf_delete_slink" output="0"/> 
+					</if>
+			        </if>
+			</for>
+	<remove name="tariff_name_array_tmp"/>
+	<remove name="slink_id_array_tmp"/>
+	<remove name="slink_id_array"/>
+	<remove name="tariff_name_array"/>
+	<remove name="tariff_name_array_tmp"/>
+	<remove name="slink_id_count"/>
+	<set dst="slink" value="0"/>
+	<call function="rpcf_get_all_services_for_user" output="0"/>
+		        <for name="k" from="0" count="slink_id_count">
+                                <set dst="tariff_name_array_tmp" src="tariff_name_array" src_index="k"/>
+                                <set dst="slink_id_array_tmp" src="slink_id_array" src_index="k"/>
+                                <if variable="tariff_name_array_tmp" value="No" condition="ne">
+					<set src="slink_id_array_tmp" dst="slink"/>
+				</if>
+			</for>
+				<if variable="slink" value="0" condition="eq">
+					<set dst="tariff_link_id" src="tariff_link_id_remove"/>
+					<call function="rpcf_unlink_user_tariff" output="0"/>  
+				</if>
+</urfa>
+

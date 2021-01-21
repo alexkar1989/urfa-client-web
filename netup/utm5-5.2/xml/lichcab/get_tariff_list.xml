@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- urfa -h 172.29.128.111 -l urfacli -p urfacli -a get_tariff_list  -->
+
+<urfa>
+        <call function="rpcf_get_tariffs_list">
+	<for name="i" from="0" count="tariffs_count">	
+		<integer name="id" array_index="i" />
+		<string name="name" array_index="i" />
+	</for>
+	</call>
+</urfa>
+

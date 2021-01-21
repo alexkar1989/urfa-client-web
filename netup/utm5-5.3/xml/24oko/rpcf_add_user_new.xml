@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<urfa>
+     <parameter name="user_id" value="0"/> <!-- don't touch this line -->
+	 <!-- login and password parameters muts be specified here or in the cmdline -->
+     <parameter name="login" comment="User login"/>
+	 <parameter name="password" comment="User password"/>
+	 <if variable="login" value="" condition="eq">
+		 <error comment="Логин пользователя не передан" variable="login"/>
+	</if>
+	 <if variable="password" value="" condition="eq">
+		 <error comment="Пароль пользователя не передан" variable="password"/>
+	</if>
+	 <!-- optional parameters with default values -->
+	 <parameter name="full_name" value='' comment="Full name"/>
+	 <parameter name="is_juridical" value='0' comment="1 if juridical person, else 0"/>
+	 <parameter name="jur_address" value= '' comment="Juridical address"/>
+	 <parameter name="act_address" value= '' comment="Actual address"/>
+	 <parameter name="work_tel" value= '' comment="Work telephone"/>
+	 <parameter name="home_tel" value= '' comment="Home telephone"/>
+	 <parameter name="mob_tel" value= '' comment="Mobile telephone"/>
+	 <parameter name="web_page" value= '' comment="Web page"/>
+	 <parameter name="icq_number" value= '' comment="ICQ number"/>
+	 <parameter name="tax_number" value= '' comment="TAX number"/>
+	 <parameter name="kpp_number" value= '' comment="KPP number"/>
+	 <parameter name="bank_id" value= '' comment="Integer bank ID"/>
+	 <parameter name="bank_account" value= '' comment="Bank account"/>
+	 <parameter name="comments" value= '' comment="Comments"/>
+	 <parameter name="personal_manager" value= '' comment="Personal manager"/>
+	 <parameter name="connect_date" value= '' comment="Unix-timestamp connect date"/>
+	 <parameter name="email" value= '' comment="e-mail address"/>
+	 <parameter name="is_send_invoice" value= '' comment="1 if send invoices to e-mail, else 0"/>
+	 <parameter name="advance_payment" value= '' comment="1 if advance payments enabled, else 0"/>
+	 <parameter name="house_id" value= '' comment="Integer house ID"/>
+	 <parameter name="flat_number" value= '' comment="Flat number"/>
+	 <parameter name="entrance" value= '' comment="Entrance"/>
+	 <parameter name="floor" value= '' comment="Floor"/>
+	 <parameter name="district" value= '' comment="District"/>
+	 <parameter name="building" value= '' comment="Building"/>
+	 <parameter name="parameter_id"  comment="Additional parameter ID"/>
+	 <parameter name="parameter_value" comment="Additional parameter value"/>
+	 <call function="rpcf_add_user_new"/>
+</urfa>
+

@@ -1,0 +1,18 @@
+<urfa>
+        <parameter name="tariff_id" default="0"/> 
+        <if variable="tariff_id" value="0" condition="eq">
+                <break/>
+        </if>
+	<call function="rpcf_get_tariff_new" output="0"/>
+                <for name="j" from="0" count="services_count">
+                        <set dst="service_id" src="service_id_array" src_index="j"/>
+                        <set dst="service_type" src="service_type_array" src_index="j"/>
+                                <if variable="service_type" value="2" condition="eq">
+                                        <set dst="sid" src="service_id"/>
+                                        <call function="rpcf_get_periodic_service_ex" output="0"/>
+                                        <set dst="cost_sev" src="cost"/>
+                                </if>
+                </for>
+		<out var="cost_sev"/>
+</urfa>
+

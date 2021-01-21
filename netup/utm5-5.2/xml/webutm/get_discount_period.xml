@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- -h 172.29.128.111 -l urfacli -p urfacli -a get_discount_period -discount_period_id  -->
+<urfa>
+        <parameter name="discount_period_id" value="0"/>
+	<if variable="discount_period_id" value="0" condition="eq">
+		<call function="rpcf_get_discount_periods"/>
+		<break/>
+	</if>
+	<call function="rpcf_get_discount_period"/>
+</urfa>
+

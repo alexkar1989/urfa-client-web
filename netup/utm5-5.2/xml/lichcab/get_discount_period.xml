@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<urfa>
+        <parameter name="discount_period_id" value="0"/>
+	<if variable="discount_period_id" value="0" condition="eq">
+		<call function="rpcf_get_discount_periods"/>
+		<break/>
+	</if>
+	<call function="rpcf_get_discount_period"/>
+</urfa>
+

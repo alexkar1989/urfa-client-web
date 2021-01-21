@@ -1,0 +1,6 @@
+<urfa>
+		<parameter name="slink_id"/>
+		<call function="rpcf_get_periodic_service_link" output="0"/>
+		<out var="start_date"/>
+</urfa>
+

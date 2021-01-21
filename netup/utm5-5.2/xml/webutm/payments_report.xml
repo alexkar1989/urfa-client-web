@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -a payments_report -user_id 1 -time_start 1493700569 -->
+<urfa>
+	<parameter name="account_id" value="0" comment="НЕ ИСПОЛЬЗОВАТЬ!"/> 
+	<parameter name="time_start"/>
+	<parameter name="time_end"/>
+        <call function="rpcf_get_user_by_account" output="0"/>
+	<call function="rpcf_payments_report_new"/>
+</urfa>

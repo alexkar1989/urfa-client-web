@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<urfa>
+<!-- Peredaem peremenie-->
+    <parameter name="account_id" value="0"/>
+    <parameter name="set_tariff_id" value="0"/>
+    <parameter name="ip_address_tmp" value="0"/>
+    <parameter name="mac_abon" value="00:00:99:99:00:00"/>
+    <parameter name="discount_period_id"/>
+
+    <set name="change_now" value="1"/>
+    <set name="policy_id" value="1"/>
+    <set name="unabon" value="1"/>	
+    <set name="unprepay" value="0"/>
+    <set dst="cost_coef" value="1.0" />
+
+    <parameter name="start_date" value="now()"/>
+    <parameter name="expire_date" value="max_time()"/>
+
+
+    <set dst="start_date" value="now()"/>
+    <set dst="expire_date" value="max_time()"/>
+    <call function="rpcf_get_user_by_account" output="0"/>
+
+    <!-- Proveryaem nalichie tariffa-->
+    <call function="rpcf_get_user_tariffs" />
+    <!-- Esli net tariffa-->
+    <set dst="tariff_id" src="set_tariff_id"/>
+    <call function="rpcf_get_tariff_new"/>
+    <set dst="tariff_current" src="tariff_id"/>
+    <set dst="tariff_next" src="tariff_id"/>
+    <call function="rpcf_link_user_tariff"/>
+    <set dst="tplink_id" src="tariff_link_id"/>
+    <!-- Proverjaem nalichie default svjazok-->
+
+</urfa>
+
+

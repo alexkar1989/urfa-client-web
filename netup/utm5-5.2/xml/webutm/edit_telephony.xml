@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+                <!-- -a edit_telephony -slink_id 513642 -tel_login karsak_245794 -tel_number 245794 -tel_password karsak_794 -->
+<urfa>
+	<parameter name="slink_id" value="0"/>
+	<parameter name="tel_login" value="0"/>
+	<parameter name="tel_number" value="0"/>
+	<parameter name="tel_password" value="0"/>
+	<if variable="slink_id" value="0" condition="eq">
+		<message text="ОШИБКА: Не передат л.с."/>
+		<break/>
+	</if>
+	<if variable="tel_login" value="0" condition="eq">
+		<message text="ОШИБКА: Не передат логин для услуги телефонии"/>
+		<break/>
+	</if>
+	<if variable="tel_number" value="0" condition="eq">
+		<message text="ОШИБКА: Не передат номер телефона для услуги телефонии"/>
+		<break/>
+	</if>
+	<if variable="tel_password" value="0" condition="eq">
+		<message text="ОШИБКА: Не передат пароль для услуги телефонии"/>
+		<break/>
+	</if>
+	<call function="rpcf_edit_tel_slink_ex"/>
+</urfa>
+

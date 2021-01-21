@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- ########  STROKA ZAPUSKA  #######
+   -u -l oush -P oush -a user5_payments_report -account_id 117313 -time_start 1451638880 -time_end 1453971668 -->
+<urfa>
+	<parameter name="time_start" value="0"/>
+	<parameter name="time_end" value="now()"/>
+	<call function="rpcf_user5_payments_report"/>
+</urfa>
