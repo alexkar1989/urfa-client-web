@@ -7,6 +7,6 @@ else define('USERIP', $_SERVER['REMOTE_ADDR']);
 
 /** NETup **/
 define('URFA', '/netup/utm5/bin/utm5_urfaclient');
-define('ADMIN_IPS', ['172.31.191.0/24'']);
+define('ADMIN_IPS', ['172.31.191.0/24']);
 
 
