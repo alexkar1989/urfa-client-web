@@ -11,12 +11,12 @@ class Bootstrap
     /**
      * @var string Активные контроллер
      */
-    private $module = 'Urfa';
+    private string $module = 'Urfa';
 
     /**
      * @var string Активный метод
      */
-    private $action = 'index';
+    private string $action = 'index';
 
     /**
      * Bootstrap constructor.
@@ -39,7 +39,7 @@ class Bootstrap
      */
     private function Route()
     {
-        $params = array();
+        $params = [];
         if ($_SERVER['REQUEST_URI'] != '/') {
             try {
                 $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -48,8 +48,8 @@ class Bootstrap
                     throw new Exception();
                 }
                 $inputJSON = file_get_contents('php://input');
-                $post = json_decode($inputJSON, TRUE);
-                $post = is_array($post) ? $post : array();
+                $post = json_decode($inputJSON, true);
+                $post = is_array($post) ? $post : [];
                 $_POST = array_merge($_POST, $post);
                 $_REQUEST = array_merge($_REQUEST, $params, $post);
             } catch (Exception $e) {

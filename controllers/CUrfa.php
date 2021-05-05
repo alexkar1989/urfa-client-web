@@ -13,10 +13,10 @@ class CUrfa extends Controller
     /**
      * @var array список ключей для доступа к контроллеру
      */
-    private $api_key = array(
+    private array $api_key = [
         'lichcab' => 'neeCh3Beehoongabeefe',
-		'24oko' => 'Noxaigh0aighadaik0ku',
-    );
+        '24oko' => 'Noxaigh0aighadaik0ku',
+    ];
 
     /**
      * CUrfa constructor.
@@ -38,12 +38,14 @@ class CUrfa extends Controller
         $version = $system['version'] ?? null;
         $login = $system['login'] ?? null;
         $password = $system['password'] ?? null;
-        $urfapath = $version ? '/netup/utm5-' . $version : '/netup/utm5';
-        if (file_exists($urfapath . '/xml/' . $this->app . '/' . $function . '.xml')) {
+        $urfaPath = $version ? '/netup/utm5-' . $version : '/netup/utm5';
+        if (file_exists($urfaPath . '/xml/' . $this->app . '/' . $function . '.xml')) {
             if ($login && $password) {
-                $this->model->urfaQuery($host, $urfapath, $function, $login, $password, $_POST['data'] ?? []);
-            } else Model::generateAnswer(401, 'Unauthorized');
-        } else Model::generateAnswer(404, 'Method is not defined');
+                $this->model->urfaQuery($host, $urfaPath, $function, $login, $password, $_POST['data'] ?? []);
+            }
+            else Model::generateAnswer(401, 'Unauthorized');
+        }
+        else Model::generateAnswer(404, 'Method is not defined');
     }
 
     /**

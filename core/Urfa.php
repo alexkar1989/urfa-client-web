@@ -5,20 +5,17 @@
  */
 class Urfa
 {
-    /**
-     * @var array
-     */
-    public $status = 0;
-    public $result;
-    public $params;
-    public $error;
-    public $debug = false;
-    private $command;
-    private $login;
-    private $password;
-    private $app;
-    private $host;
-    private $urfaPath;
+    public $status;
+    public array $result = [];
+    public string $params;
+    public string $error;
+    public bool $debug = false;
+    private string $command;
+    private string $login;
+    private string $password;
+    private string $app;
+    private string $host;
+    private string $urfaPath;
 
     /**
      * Urfa constructor.
@@ -30,7 +27,6 @@ class Urfa
      */
     public function __construct($host, $urfaPath, $app, $login, $password)
     {
-        $this->result = [];
         $this->host = $host;
         $this->urfaPath = $urfaPath;
         $this->app = $app;
@@ -39,36 +35,31 @@ class Urfa
     }
 
     /**
-     * @param $key
-     * @param $value
+     * @param      $key
+     * @param      $value
      * @param bool $add
      */
-    public function addParameter($key, $value, $add = true)
+    public function addParameter($key, $value, bool $add = true)
     {
         if ($add) $this->params .= " -$key" . " '" . $value . "'";
         else $this->params = " -$key" . " '" . $value . "'";
     }
 
     /**
-     * @param $method
+     * @param      $method
      * @param bool $byUser
      * @return bool
+     * @throws Exception
      */
-    public function execute($method, $byUser = false)
+    public function execute($method, bool $byUser = false): bool
     {
-        $this->command = $this->urfaPath . "/bin/utm5_urfaclient" .
-            " -c " . $this->urfaPath . "/utm5_urfaclient.cfg" .
-            " -h " . $this->host .
-            " -a " . $this->app . "/" . $method .
-            ($byUser ? " -u " : "") .
-            " -l " . $this->login . " -P " . $this->password .
-            $this->params .
-            ($this->debug ? " -debug " : "");
+        $this->command = $this->urfaPath . "/bin/utm5_urfaclient" . " -c " . $this->urfaPath . "/utm5_urfaclient.cfg" . " -h " . $this->host . " -a " . $this->app . "/" . $method . ($byUser ? " -u " : "") . " -l " . $this->login . " -P " . $this->password . $this->params . ($this->debug ? " -debug " : "");
         $result = $this->execCommand();
         if ($this->debug) dump($this->error, $result);
         $this->status = preg_replace("/[^\d]/", "", stristr($this->error, 'code'));
         $this->error = strtok(stristr($this->error, "ERROR:"), ".");
-        if (preg_match("/code/", $this->error)) $this->status = preg_replace("/[^\d]/", "", stristr($this->error, 'code'));
+        if (preg_match("/code/", $this->error)) $this->status = preg_replace("/[^\d]/", "",
+            stristr($this->error, 'code'));
         if ($result) $this->XmlToArray(new SimpleXMLElement($result));
     }
 
@@ -77,13 +68,14 @@ class Urfa
      */
     private function XmlToArray($xml)
     {
-        $data = array();
+        $data = [];
         if (isset($xml->call)) {
             foreach ($xml->call as $fResult) {
                 $fName = (string)$fResult['function'];
                 $data[$fName] = $this->toArray($fResult->output[0]);
             }
-        } else {
+        }
+        else {
             for ($i = 0; $i < count($xml->array); $i++) {
                 foreach ($xml->array[$i]->dim as $dim) {
                     $data[(string)$xml->array[$i]['name']][] = (string)$dim;
@@ -97,21 +89,16 @@ class Urfa
      * @param $xml
      * @return array
      */
-    private function toArray($xml)
+    private function toArray($xml): array
     {
-        $data = array();
+        $data = [];
         $tName = "";
-        $tValue = 0;
         $tType = "";
         foreach ($xml as $type => $out) {
             switch ($type) {
                 case 'integer':
                     $data[(string)$out['name']] = (int)$out['value'];
                     $tName = (string)$out['name'];
-                    $tValue = (int)$out['value'];
-                    break;
-                case 'string':
-                    $data[(string)$out['name']] = (string)$out['value'];
                     break;
                 case 'double':
                     $data[(string)$out['name']] = (float)$out['value'];
@@ -119,7 +106,7 @@ class Urfa
                 case 'array':
                     if ($tType != 'integer') $tName = (string)$out['name'];
 
-                    $data[$tName] = array();
+                    $data[$tName] = [];
 
                     foreach ($out->item as $item) {
                         $data[$tName][] = $this->toArray($item);

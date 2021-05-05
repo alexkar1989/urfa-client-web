@@ -6,9 +6,9 @@
 class Model
 {
     /**
-     * @var $app
+     * @var false|int|string|null
      */
-    protected $app;
+    protected $app = null;
 
     /**
      * Model constructor.
@@ -22,11 +22,11 @@ class Model
     /**
      * Генерация ответа
      *
-     * @param int $code
+     * @param int   $code
      * @param array $data
-     * @param bool $exit
+     * @param bool  $exit
      */
-    public static function generateAnswer($code = 200, $data = array(), $exit = true)
+    public static function generateAnswer(int $code = 200, array $data = array(), bool $exit = true)
     {
         http_response_code($code);
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
