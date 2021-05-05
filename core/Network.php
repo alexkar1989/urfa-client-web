@@ -13,7 +13,7 @@ class Network
     /**
      * @var
      */
-    public string $ip;
+    public $ip;
 
     /**
      * @var array|string
@@ -23,7 +23,7 @@ class Network
     /**
      * @var array
      */
-    private array $excludes = [];
+    private $excludes = [];
 
     /**
      * Network constructor.

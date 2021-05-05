@@ -11,12 +11,12 @@ class Bootstrap
     /**
      * @var string Активные контроллер
      */
-    private string $module = 'Urfa';
+    private $module = 'Urfa';
 
     /**
      * @var string Активный метод
      */
-    private string $action = 'index';
+    private $action = 'index';
 
     /**
      * Bootstrap constructor.

@@ -11,19 +11,11 @@
 class CUrfa extends Controller
 {
     /**
-     * @var array список ключей для доступа к контроллеру
-     */
-    private array $api_key = [
-        'lichcab' => 'neeCh3Beehoongabeefe',
-        '24oko' => 'Noxaigh0aighadaik0ku',
-    ];
-
-    /**
      * CUrfa constructor.
      */
     function __construct()
     {
-        parent::__construct($this->api_key);
+        parent::__construct(APIS);
         $_POST['system'] or Model::generateAnswer(400);
     }
 

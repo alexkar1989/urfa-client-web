@@ -7,5 +7,11 @@ else define('USER_IP', $_SERVER['REMOTE_ADDR']);
 
 /** NETup **/
 const ADMIN_IPS = ['172.24.130.0/24', '172.29.128.0/24'];
+const APIS = [
+    'webutm_new' => 'eu0UBooghuokahphiel4',
+    'webutm' => 'faiJaipeez9Ohneg4iec',
+    'lichcab' => 'neeCh3Beehoongabeefe',
+    '24oko' => 'Noxaigh0aighadaik0ku',
+];
 
 

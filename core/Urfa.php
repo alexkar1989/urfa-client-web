@@ -6,16 +6,16 @@
 class Urfa
 {
     public $status;
-    public array $result = [];
-    public string $params;
-    public string $error;
-    public bool $debug = false;
-    private string $command;
-    private string $login;
-    private string $password;
-    private string $app;
-    private string $host;
-    private string $urfaPath;
+    public $result = [];
+    public $params;
+    public $error;
+    public $debug = false;
+    private $command;
+    private $login;
+    private $password;
+    private $app;
+    private $host;
+    private $urfaPath;
 
     /**
      * Urfa constructor.

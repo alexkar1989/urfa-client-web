@@ -8,12 +8,12 @@ class Controller
     /**
      * @var array
      */
-    private array $api_key = [];
+    private $api_key = [];
 
     /**
      * @var Model
      */
-    protected Model $model;
+    protected $model;
 
     /**
      * @var false|int|string|null
