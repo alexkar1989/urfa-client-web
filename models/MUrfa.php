@@ -31,12 +31,18 @@ class MUrfa extends Model
         if (isset($params['debug']) && $params['debug'] == true) $this->urfa->debug = true;
         if (!empty($params)) $this->createData($params);
         $this->urfa->execute($function);
-        if (!$this->urfa->status && $this->urfa->error) Model::generateAnswer(500, $this->urfa->error);
-        elseif ($this->urfa->status || $this->urfa->error) Model::generateAnswer($this->codeError($this->urfa->status),
-            $this->urfa->error);
-        if (empty($this->urfa->result)) Model::generateAnswer(400, $this->urfa->status);
-        elseif (isset($this->urfa->result[$function]) && empty($this->urfa->result[$function])) Model::generateAnswer(204,
-            $this->urfa->status);
+        if (!$this->urfa->status && $this->urfa->error) {
+			Model::writeLogs($this->urfa->error);
+			Model::generateAnswer(500, $this->urfa->error);
+		}
+        elseif ($this->urfa->status || $this->urfa->error) {
+			Model::writeLogs($this->urfa->error);
+			Model::generateAnswer($this->codeError($this->urfa->status), $this->urfa->error);
+		}
+        if (empty($this->urfa->result)) {
+			Model::generateAnswer(400, $this->urfa->status);
+		}
+        elseif (isset($this->urfa->result[$function]) && empty($this->urfa->result[$function])) Model::generateAnswer(204, $this->urfa->status);
         else Model::generateAnswer(200, $this->urfa->result);
     }
 
@@ -67,11 +73,12 @@ class MUrfa extends Model
      * @param $code
      * @return int
      */
-    private function codeError($code): int
+    private function codeError($code)
     {
         $error = [
             2 => 500,
             10 => 500,
+			13 => 401,
             20 => 500,
             100 => 400,
         ];

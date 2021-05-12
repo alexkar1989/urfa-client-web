@@ -3,10 +3,9 @@ Deny from all
 Allow from 127.0.0.1
 Allow from 5.189.199.118
 Allow from 5.189.199.123
-Allow from 172.24.130.199
 Allow from 172.24.130.123
-Allow from 172.24.130.240
-Allow from 172.24.130.81
+Allow from 172.24.130.216
+Allow from 172.29.128.81
 
 AddDefaultCharset utf-8
 php_flag display_errors off
