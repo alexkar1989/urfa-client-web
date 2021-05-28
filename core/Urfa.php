@@ -53,14 +53,20 @@ class Urfa
      */
     public function execute($method, bool $byUser = false)
     {
-        $this->command = $this->urfaPath . "/bin/utm5_urfaclient" . " -c " . $this->urfaPath . "/utm5_urfaclient.cfg" . " -h " . $this->host . " -a " . $this->app . "/" . $method . ($byUser ? " -u " : "") . " -l " . $this->login . " -P " . $this->password . $this->params . ($this->debug ? " -debug " : "");
+        $this->command = $this->urfaPath . "/bin/utm5_urfaclient" . 
+						 " -c " . $this->urfaPath . "/utm5_urfaclient.cfg" . 
+						 " -h " . $this->host . 
+					     ($byUser ? " -u " : "") . " -l " . $this->login . 
+						 " -P " . $this->password . 
+						 " -a " . $this->app . "/" . $method . 
+						 $this->params . 
+						 ($this->debug ? " -debug " : "");
 		Model::writeLogs($this->command);
         $result = $this->execCommand();
         if ($this->debug) dump($this->error, $result);
         $this->status = preg_replace("/[^\d]/", "", stristr($this->error, 'code'));
         $this->error = strtok(stristr($this->error, "ERROR:"), ".");
-        if (preg_match("/code/", $this->error)) $this->status = preg_replace("/[^\d]/", "",
-            stristr($this->error, 'code'));
+        if (preg_match("/code/", $this->error)) $this->status = preg_replace("/[^\d]/", "", stristr($this->error, 'code'));
         if ($result) $this->XmlToArray(new SimpleXMLElement($result));
     }
 

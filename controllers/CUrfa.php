@@ -30,10 +30,11 @@ class CUrfa extends Controller
         $version = $system['version'] ?? null;
         $login = $system['login'] ?? null;
         $password = $system['password'] ?? null;
+        $byUser = $system['byUser'] ?? null;
         $urfaPath = $version ? '/netup/utm5-' . $version : '/netup/utm5';
         if (file_exists($urfaPath . '/xml/' . $this->app . '/' . $function . '.xml')) {
             if ($login && $password) {
-                $this->model->urfaQuery($host, $urfaPath, $function, $login, $password, $_POST['data'] ?? []);
+                $this->model->urfaQuery($host, $urfaPath, $function, $login, $password, $_POST['data'] ?? [], $byUser);
             }
             else Model::generateAnswer(401, 'Unauthorized');
         }

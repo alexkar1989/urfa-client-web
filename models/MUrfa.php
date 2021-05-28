@@ -25,12 +25,12 @@ class MUrfa extends Model
      * @param array $params
      * @throws Exception
      */
-    public function urfaQuery($host, $urfaPath, $function, $login, $password, array $params = [])
+    public function urfaQuery($host, $urfaPath, $function, $login, $password, array $params = [], $byUser)
     {
         $this->urfa = new Urfa($host, $urfaPath, $this->app, $login, $password);
         if (isset($params['debug']) && $params['debug'] == true) $this->urfa->debug = true;
         if (!empty($params)) $this->createData($params);
-        $this->urfa->execute($function);
+        $this->urfa->execute($function, $byUser);
         if (!$this->urfa->status && $this->urfa->error) {
 			Model::writeLogs($this->urfa->error);
 			Model::generateAnswer(500, $this->urfa->error);
@@ -38,9 +38,6 @@ class MUrfa extends Model
         elseif ($this->urfa->status || $this->urfa->error) {
 			Model::writeLogs($this->urfa->error);
 			Model::generateAnswer($this->codeError($this->urfa->status), $this->urfa->error);
-		}
-        if (empty($this->urfa->result)) {
-			Model::generateAnswer(400, $this->urfa->status);
 		}
         elseif (isset($this->urfa->result[$function]) && empty($this->urfa->result[$function])) Model::generateAnswer(204, $this->urfa->status);
         else Model::generateAnswer(200, $this->urfa->result);
