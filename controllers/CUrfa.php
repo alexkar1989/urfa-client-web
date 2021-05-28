@@ -25,16 +25,17 @@ class CUrfa extends Controller
     public function index()
     {
         $system = $_POST['system'];
-        $host = $system['host'] ?? null;
-        $function = $system['function'] ?? null;
-        $version = $system['version'] ?? null;
-        $login = $system['login'] ?? null;
-        $password = $system['password'] ?? null;
-        $byUser = $system['byUser'] ?? null;
+        $host = $system['host'] ?? '';
+        $function = $system['function'] ?? '';
+        $version = $system['version'] ?? '';
+        $login = $system['login'] ?? '';
+        $password = $system['password'] ?? '';
+        $byUser = $system['byUser'] ?? false;
+        $data = $_POST['data'] ?? [];
         $urfaPath = $version ? '/netup/utm5-' . $version : '/netup/utm5';
         if (file_exists($urfaPath . '/xml/' . $this->app . '/' . $function . '.xml')) {
             if ($login && $password) {
-                $this->model->urfaQuery($host, $urfaPath, $function, $login, $password, $_POST['data'] ?? [], $byUser);
+                $this->model->urfaQuery($host, $urfaPath, $function, $login, $password, $data, $byUser);
             }
             else Model::generateAnswer(401, 'Unauthorized');
         }

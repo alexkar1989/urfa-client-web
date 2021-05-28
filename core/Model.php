@@ -23,7 +23,7 @@ class Model
      * Генерация ответа
      *
      * @param int   $code
-     * @param array $data
+     * @param $data
      * @param bool  $exit
      */
     public static function generateAnswer(int $code = 200, $data = [], bool $exit = true)

@@ -51,7 +51,7 @@ class Urfa
      * @return bool
      * @throws Exception
      */
-    public function execute($method, bool $byUser = false)
+    public function execute($method, bool $byUser = false): bool
     {
         $this->command = $this->urfaPath . "/bin/utm5_urfaclient" . 
 						 " -c " . $this->urfaPath . "/utm5_urfaclient.cfg" . 

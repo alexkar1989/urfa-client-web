@@ -5,7 +5,7 @@
  */
 class MUrfa extends Model
 {
-    private $urfa;
+    private Urfa $urfa;
 
     /**
      * MUrfa constructor.
@@ -17,28 +17,30 @@ class MUrfa extends Model
     }
 
     /**
-     * @param       $host
-     * @param       $urfaPath
-     * @param       $function
-     * @param       $login
-     * @param       $password
-     * @param array $params
+     * @param string $host
+     * @param string $urfaPath
+     * @param string $function
+     * @param string $login
+     * @param string $password
+     * @param array  $params
+     * @param bool   $byUser
      * @throws Exception
      */
-    public function urfaQuery($host, $urfaPath, $function, $login, $password, array $params = [], $byUser)
+    public function urfaQuery(string $host, string $urfaPath, string $function, string $login, string $password,
+                              array $params = [], bool $byUser = false)
     {
         $this->urfa = new Urfa($host, $urfaPath, $this->app, $login, $password);
         if (isset($params['debug']) && $params['debug'] == true) $this->urfa->debug = true;
         if (!empty($params)) $this->createData($params);
         $this->urfa->execute($function, $byUser);
         if (!$this->urfa->status && $this->urfa->error) {
-			Model::writeLogs($this->urfa->error);
-			Model::generateAnswer(500, $this->urfa->error);
-		}
+            Model::writeLogs($this->urfa->error);
+            Model::generateAnswer(500, $this->urfa->error);
+        }
         elseif ($this->urfa->status || $this->urfa->error) {
-			Model::writeLogs($this->urfa->error);
-			Model::generateAnswer($this->codeError($this->urfa->status), $this->urfa->error);
-		}
+            Model::writeLogs($this->urfa->error);
+            Model::generateAnswer($this->codeError($this->urfa->status), $this->urfa->error);
+        }
         elseif (isset($this->urfa->result[$function]) && empty($this->urfa->result[$function])) Model::generateAnswer(204, $this->urfa->status);
         else Model::generateAnswer(200, $this->urfa->result);
     }
@@ -70,12 +72,12 @@ class MUrfa extends Model
      * @param $code
      * @return int
      */
-    private function codeError($code)
+    private function codeError($code): int
     {
         $error = [
             2 => 500,
             10 => 500,
-			13 => 401,
+            13 => 401,
             20 => 500,
             100 => 400,
         ];
